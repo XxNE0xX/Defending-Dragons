@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 1579440052}
   - component: {fileID: 1579440053}
   m_Layer: 0
-  m_Name: EnemyGenerator
+  m_Name: EnemyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579440051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa882f1b9ef791d49800953054c44cdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 799c223c4385abc4aace02c64e8a0eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}

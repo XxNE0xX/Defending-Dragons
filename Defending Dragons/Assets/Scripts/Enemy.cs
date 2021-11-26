@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private EnemyType _enemyType;
+    
+    public EnemyType EnemyType
     {
-        
+        get => _enemyType;
+        set
+        {
+            _enemyType = value;
+            gameObject.GetComponentInChildren<SpriteRenderer>().color = _enemyType switch
+            {
+                EnemyType.T1 => Color.cyan,
+                EnemyType.T2 => Color.magenta,
+                _ => gameObject.GetComponentInChildren<SpriteRenderer>().color
+            };
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

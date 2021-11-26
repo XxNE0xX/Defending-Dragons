@@ -1,45 +1,45 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGenerator : MonoBehaviour
+public class EnemyGenerator
 {
-    public Enemy enemyPrefab;
-    private const int ENEMIES_COUNT = 50; 
-    private List<Enemy> idleEnemies;
-
-    private void SpawnEnemies()
+    private Enemy _enemyPrefab;
+    
+    /// <summary>
+    /// Initialize the generator.
+    /// </summary>
+    public void Init()
     {
-        for (int i = 0; i < ENEMIES_COUNT; i++)
+        _enemyPrefab = Resources.Load<Enemy>("Prefabs/Enemy");
+    }
+
+    /// <summary>
+    /// Assign a random type to the given enemy.
+    /// </summary>
+    /// <param name="enemy"> The enemy that its type is being decided.</param>
+    private static void EnemyTypeRandomizer(Enemy enemy)
+    {
+        int rand = Random.Range(0, System.Enum.GetNames(typeof(EnemyType)).Length);
+        enemy.EnemyType = (EnemyType) rand;
+    }
+
+    /// <summary>
+    /// Filling the enemies object pool for later usage.
+    /// </summary>
+    /// <param name="enemiesCount"> Number of enemies that are going to be in the pool. </param>
+    public List<Enemy> SpawnEnemies(int enemiesCount)
+    {
+        List<Enemy> idleEnemies = new List<Enemy>();
+        for (int i = 0; i < enemiesCount; i++)
         {
-            Enemy enemy = Instantiate(enemyPrefab);
+            Enemy enemy = Object.Instantiate(_enemyPrefab);
+            EnemyTypeRandomizer(enemy);
             enemy.name = "Enemy" + i;
-            enemy.transform.position.Set(-5, 0, 0);
+            enemy.transform.position = new Vector3(-5, 0, 0);
             idleEnemies.Add(enemy);
         }
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        idleEnemies = new List<Enemy>();
-        enemyPrefab = Resources.Load<Enemy>("Prefabs/Enemy");
-        SpawnEnemies();
+
+        return idleEnemies;
     }
 
-    private Enemy GrabIdleEnemy()
-    {
-        return new Enemy();
-    }
-
-    private void RunEnemy(Enemy enemy)
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
