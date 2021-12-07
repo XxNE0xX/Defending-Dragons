@@ -79,6 +79,9 @@ public class EnemiesManager : MonoBehaviour
             
             // Finalizing the process by calling the local despawn
             enemy.Despawn();
+            
+            Debug.Log("The enemy with transform InstanceID: " + enemy.transform.GetInstanceID() + 
+                           " despawned.");
         }
         // Logging error if something tries to despawn an enemy twice
         else

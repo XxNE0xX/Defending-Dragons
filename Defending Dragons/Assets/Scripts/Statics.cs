@@ -2,9 +2,7 @@
 
 public class Statics
 {
-    /// <summary>
-    /// Base enemies count 
-    /// </summary>
+    // Base enemies count
     public static readonly int BaseEnemiesCountInPool = 20;
 
     public static readonly float DefaultPoolPositionX = -200f;
@@ -15,4 +13,15 @@ public class Statics
     public static readonly float EnemySpawnOffset = 0.8f;
 
     public static readonly float EnemySpeed = 1.4f;
+
+    public static readonly int CastleHealth = 10000;
+
+    public static readonly int MaxEnemyDamage = 125;
+    public static readonly int MinEnemyDamage = 50;
+
+    public static readonly float DisappearTimerMax = 3f;
+    
+    // Minimum and maximum for the red color of the damage popup text
+    public static readonly int MaxDamagePopupGreen = 230;
+    public static readonly int MinDamagePopupGreen = 120;
 }

@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class EnemyGenerator
 {
-    private Enemy _enemyPrefab;
+    private Enemy _pfEnemy;
     
     /// <summary>
     /// Initializes the generator.
     /// </summary>
     public void Init()
     {
-        _enemyPrefab = Resources.Load<Enemy>("Prefabs/Enemy");
+        _pfEnemy = GameAssets.I.pfEnemy;
     }
 
     /// <summary>
@@ -33,8 +33,7 @@ public class EnemyGenerator
     {
         for (int i = 0; i < enemiesCount; i++)
         {
-            Enemy enemy = Object.Instantiate(_enemyPrefab, enemiesPool.transform, true);
-            // EnemyTypeRandomizer(enemy);
+            Enemy enemy = Object.Instantiate(_pfEnemy, enemiesPool.transform, true);
             enemy.name = "Enemy" + i;
             enemy.transform.position = new Vector3(Statics.DefaultPoolPositionX, 0, 0);
             idleEnemies.Add(enemy);

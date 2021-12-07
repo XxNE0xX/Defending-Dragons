@@ -1,24 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private EnemiesManager _enemiesManager;
-
     private List<Enemy> _enemiesList;
 
-    void Start()
+    private void Awake()
     {
         _enemiesManager = GameObject.FindWithTag("EnemiesManager").GetComponent<EnemiesManager>();
         
         _enemiesList = new List<Enemy>();
+    }
+
+    void Start()
+    {
+
+        // _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.T2, EnemyMoveDirection.MarchLeft));
+        // _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.T1, EnemyMoveDirection.MarchRight));
         
-        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.T2, EnemyMoveDirection.MarchLeft));
-        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.T1, EnemyMoveDirection.MarchRight));
-        
-        StartCoroutine(DespawnTempFunction(7, 0));
-        StartCoroutine(DespawnTempFunction(5, 1));
+        // StartCoroutine(DespawnTempFunction(7, 0));
+        // StartCoroutine(DespawnTempFunction(5, 1));
 
     }
 

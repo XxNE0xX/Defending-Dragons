@@ -9,12 +9,16 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private EnemyType _enemyType;
     private EnemyMoveDirection _enemyMoveDirection;
+    private EnemyStatus _status;
     private EnemyMotionManager _motionManager;
+    private EnemyDetectionManager _enemyDetectionManager;
+
 
     private void Awake()
     {
-        _spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
-        _motionManager = gameObject.GetComponent<EnemyMotionManager>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _motionManager = GetComponent<EnemyMotionManager>();
+        _enemyDetectionManager = GetComponent<EnemyDetectionManager>();
     }
 
     /// <summary>
@@ -52,6 +56,20 @@ public class Enemy : MonoBehaviour
             };
         }
     }
+    
+    public EnemyStatus EnemyStatus
+    {
+        get => _status;
+        set
+        {
+            _status = value;
+            if (value == EnemyStatus.Attacking)
+            {
+                StartAttacking();
+                _spriteRenderer.color = Color.blue;
+            }
+        }
+    }
 
     /// <summary>
     /// Setting the position of the object to the edge of the screen.
@@ -67,8 +85,9 @@ public class Enemy : MonoBehaviour
         {
             transform.position = new Vector3(-Statics.ScreenEdgeX - Statics.EnemySpawnOffset, 0, 0);
         }
-        
+
         _motionManager.Moving = true;
+        _status = EnemyStatus.Marching;
     }
     
     /// <summary>
@@ -79,8 +98,18 @@ public class Enemy : MonoBehaviour
     public void Despawn()
     {
         transform.position = new Vector3(Statics.DefaultPoolPositionX, 0, 0);
-        _motionManager.Moving = false;
+        
+        // Resetting the properties of the enemy when backing to the pool 
         EnemyType = EnemyType.Default;
+        EnemyStatus = EnemyStatus.Default;
+        EnemyMoveDirection = EnemyMoveDirection.Default;
+
+        _motionManager.Moving = false;
+    }
+
+    private void StartAttacking()
+    {
+        // Start damaging the castle
     }
 
 }

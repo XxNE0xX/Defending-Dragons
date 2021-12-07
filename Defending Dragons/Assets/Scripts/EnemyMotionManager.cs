@@ -36,6 +36,11 @@ public class EnemyMotionManager : MonoBehaviour
         }
     }
 
+    public void CollisionWithCastle()
+    {
+        _localSpeed = 0;
+    }
+
     private void Awake()
     {
         _enemy = GetComponent<Enemy>();

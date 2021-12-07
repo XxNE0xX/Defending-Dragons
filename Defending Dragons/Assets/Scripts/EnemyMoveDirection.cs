@@ -1,4 +1,4 @@
 ﻿public enum EnemyMoveDirection
 {
-    MarchLeft, MarchRight
+    Default, MarchLeft, MarchRight
 }
