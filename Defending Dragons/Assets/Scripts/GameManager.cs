@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private EnemiesManager _enemiesManager;
     private List<Enemy> _enemiesList;
+    
 
     private void Awake()
     {
