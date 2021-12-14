@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Cannonball : MonoBehaviour
 {
+    
+    [SerializeField] private Tilemap groundTiles;
+    
     private Rigidbody2D _rb;
 
     private void Awake()
@@ -13,11 +17,13 @@ public class Cannonball : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log(collision.gameObject);
         if (collision.gameObject.CompareTag("Ground"))
         {
             Debug.Log("The cannonball " + gameObject.name + " has collided with the ground.");
-            _rb.gravityScale = 0f;
+            Vector3 belowTilePosition = transform.position - new Vector3(0f, 0.3f, 0f);
+            Vector3Int explosionTilePos = groundTiles.WorldToCell(belowTilePosition);
+            groundTiles.SetTileFlags(explosionTilePos, TileFlags.None);
+            groundTiles.SetColor(explosionTilePos, Color.red);
         }
         
     }
