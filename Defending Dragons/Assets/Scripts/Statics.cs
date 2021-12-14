@@ -11,8 +11,9 @@ public class Statics
 
     public static float ScreenEdgeX;
     public static readonly float EnemySpawnOffset = 0.8f;
+    public static readonly float EnemyVerticalOffset = 0.35f;
 
-    public static readonly float EnemySpeed = 1.4f;
+    public static readonly float EnemySpeed = 0.7f;
 
     public static readonly int CastleHealth = 10000;
 

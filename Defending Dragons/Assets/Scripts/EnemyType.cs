@@ -1,4 +1,4 @@
 ﻿public enum EnemyType
 {
-    Default, T1, T2
+    Default, Blue, Red, Yellow, Green, Purple, Orange, Black 
 }

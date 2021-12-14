@@ -32,9 +32,14 @@ public class Enemy : MonoBehaviour
             _enemyType = value;
             _spriteRenderer.color = _enemyType switch
             {
-                EnemyType.T1 => Color.cyan,
-                EnemyType.T2 => Color.magenta,
-                _ => Color.red
+                EnemyType.Blue => new Color32(0, 204, 255, 255),
+                EnemyType.Red => new Color32(255, 76, 81, 255),
+                EnemyType.Yellow => Color.yellow,
+                EnemyType.Green => new Color32(102, 255, 76, 255),
+                EnemyType.Purple => new Color32(255, 0, 255, 255),
+                EnemyType.Orange => new Color32(255, 116, 0, 255),
+                EnemyType.Black => new Color32(130, 130, 130, 255),
+                _ => Color.black
             };
         }
     }
@@ -66,7 +71,7 @@ public class Enemy : MonoBehaviour
             if (value == EnemyStatus.Attacking)
             {
                 StartAttacking();
-                _spriteRenderer.color = Color.blue;
+                _spriteRenderer.color = Color.magenta;
             }
         }
     }
@@ -79,11 +84,13 @@ public class Enemy : MonoBehaviour
     {
         if (_enemyMoveDirection == EnemyMoveDirection.MarchLeft)
         {
-            transform.position = new Vector3(Statics.ScreenEdgeX + Statics.EnemySpawnOffset, 0, 0);
+            transform.position = new Vector3(Statics.ScreenEdgeX + Statics.EnemySpawnOffset, 
+                                             Statics.EnemyVerticalOffset, 0);
         }
         else if (_enemyMoveDirection == EnemyMoveDirection.MarchRight)
         {
-            transform.position = new Vector3(-Statics.ScreenEdgeX - Statics.EnemySpawnOffset, 0, 0);
+            transform.position = new Vector3(-Statics.ScreenEdgeX - Statics.EnemySpawnOffset, 
+                                             Statics.EnemyVerticalOffset, 0);
         }
 
         _motionManager.Moving = true;
@@ -97,7 +104,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     public void Despawn()
     {
-        transform.position = new Vector3(Statics.DefaultPoolPositionX, 0, 0);
+        transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.EnemyVerticalOffset, 0);
         
         // Resetting the properties of the enemy when backing to the pool 
         EnemyType = EnemyType.Default;

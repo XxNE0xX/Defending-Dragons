@@ -48,6 +48,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Castle
+    uniqueID: 2717554315
+    locked: 0
+  - name: Character
+    uniqueID: 1708580821
+    locked: 0
   - name: Top
     uniqueID: 44261843
     locked: 0

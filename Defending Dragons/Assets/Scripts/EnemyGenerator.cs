@@ -35,7 +35,7 @@ public class EnemyGenerator
         {
             Enemy enemy = Object.Instantiate(_pfEnemy, enemiesPool.transform, true);
             enemy.name = "Enemy" + i;
-            enemy.transform.position = new Vector3(Statics.DefaultPoolPositionX, 0, 0);
+            enemy.transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.EnemyVerticalOffset, 0);
             idleEnemies.Add(enemy);
         }
 

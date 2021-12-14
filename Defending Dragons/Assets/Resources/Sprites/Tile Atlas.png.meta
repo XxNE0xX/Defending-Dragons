@@ -25,13 +25,13 @@ TextureImporter:
     second: Tile Atlas_6
   - first:
       213: 6762473081782024912
-    second: Tile Atlas_7
+    second: Wall_Corner_100
   - first:
       213: -1244223586798054502
-    second: Tile Atlas_8
+    second: Gate_Top
   - first:
       213: -3378612296315141902
-    second: Tile Atlas_9
+    second: Gate_Bot
   - first:
       213: 8110483918751813918
     second: Tile Atlas_10
@@ -40,7 +40,61 @@ TextureImporter:
     second: Tile Atlas_11
   - first:
       213: -2574231553194838554
-    second: Tile Atlas_12
+    second: Enemy_Size0
+  - first:
+      213: -9126481957704183608
+    second: Tile Atlas_13
+  - first:
+      213: -716918837380707232
+    second: Tile Atlas_14
+  - first:
+      213: 8891700440301774446
+    second: Wall_Corner_010
+  - first:
+      213: 9118351781383355141
+    second: Wall_Corner_001
+  - first:
+      213: 7389551175589713177
+    second: Wall_Corner_200
+  - first:
+      213: 1589809921929538992
+    second: Wall_Center
+  - first:
+      213: 196124836415628893
+    second: Wall_Corner_002
+  - first:
+      213: -5035062739983266043
+    second: Wall_Corner_300
+  - first:
+      213: -58103537399957311
+    second: Wall_Corner_030
+  - first:
+      213: 1258937829860088317
+    second: Wall_Corner_003
+  - first:
+      213: 8847203668149681582
+    second: Wall_Edge_North
+  - first:
+      213: 8561060038467849295
+    second: Wall_Full
+  - first:
+      213: 6474872599153233231
+    second: Wall_Edge_West
+  - first:
+      213: 2614737343503639839
+    second: Wall_Edge_Vertical_Center
+  - first:
+      213: -8143959076805724399
+    second: Wall_Edge_East
+  - first:
+      213: 2999782887838618308
+    second: Wall_Edge_South
+  - first:
+      213: -3980377464221934989
+    second: Wall_Edge_Horizontal_Center
+  - first:
+      213: -4157853536657716742
+    second: Wall_Inside
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -301,13 +355,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile Atlas_7
+      name: Wall_Corner_100
       rect:
         serializedVersion: 2
-        x: 224
-        y: 352
-        width: 32
-        height: 32
+        x: 0
+        y: 400
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,11 +376,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile Atlas_8
+      name: Gate_Top
       rect:
         serializedVersion: 2
-        x: 256
-        y: 352
+        x: 159
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -347,7 +401,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -368,7 +422,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 320
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -385,13 +439,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tile Atlas_12
+      name: Enemy_Size0
       rect:
         serializedVersion: 2
         x: 288
-        y: 320
+        y: 352
         width: 32
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,6 +455,405 @@ TextureImporter:
       bones: []
       spriteID: 6e5383e8a0e764cd0800000000000000
       internalID: -2574231553194838554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate_Bot
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f08e546402cc11d0800000000000000
+      internalID: -3378612296315141902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0d70e7309385180800000000000000
+      internalID: -9126481957704183608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c0325ad1efc06f0800000000000000
+      internalID: -716918837380707232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_010
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 400
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e662f51b07aa56b70800000000000000
+      internalID: 8891700440301774446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_001
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 400
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bb76252a4ea8e70800000000000000
+      internalID: 9118351781383355141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915589684a5fc8660800000000000000
+      internalID: 7389551175589713177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Fill
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd600963b3201610800000000000000
+      internalID: 1589809921929538992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_002
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d566f26ef76c8b200800000000000000
+      internalID: 196124836415628893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_300
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f0e796d1ddf1ab0800000000000000
+      internalID: -5035062739983266043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_030
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8f41df323913ff0800000000000000
+      internalID: -58103537399957311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Corner_003
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df99c1f3945a87110800000000000000
+      internalID: 1258937829860088317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Edge_North
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 400
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead38979cd497ca70800000000000000
+      internalID: 8847203668149681582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Full
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c0bad1fbefec670800000000000000
+      internalID: 8561060038467849295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Edge_West
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d4076d25e5bd950800000000000000
+      internalID: 6474872599153233231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Edge_East
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1173da14e58dafe80800000000000000
+      internalID: -8143959076805724399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Edge_South
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c29ae894ae51a920800000000000000
+      internalID: 2999782887838618308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Edge_Vertical_Center
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15ab7ca2c9694420800000000000000
+      internalID: 2614737343503639839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Edge_Horizontal_Center
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ad41509cbd2c8c0800000000000000
+      internalID: -3980377464221934989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Inside
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 400
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af94a67dc365c46c0800000000000000
+      internalID: -4157853536657716742
       vertices: []
       indices: 
       edges: []

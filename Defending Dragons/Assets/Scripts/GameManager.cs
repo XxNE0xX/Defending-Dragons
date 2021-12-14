@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        // _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.T2, EnemyMoveDirection.MarchLeft));
-        // _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.T1, EnemyMoveDirection.MarchRight));
+        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.Red, EnemyMoveDirection.MarchLeft));
+        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.Blue, EnemyMoveDirection.MarchRight));
         
-        // StartCoroutine(DespawnTempFunction(7, 0));
-        // StartCoroutine(DespawnTempFunction(5, 1));
+        StartCoroutine(DespawnTempFunction(10, 0));
+        StartCoroutine(DespawnTempFunction(12, 1));
 
     }
 
