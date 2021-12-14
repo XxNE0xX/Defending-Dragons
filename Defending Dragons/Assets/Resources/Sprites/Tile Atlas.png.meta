@@ -95,6 +95,12 @@ TextureImporter:
   - first:
       213: -4157853536657716742
     second: Wall_Inside
+  - first:
+      213: -4103184590699418448
+    second: Cannonball_Raw
+  - first:
+      213: 8517728319659890704
+    second: Cannonball_OnFire
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -854,6 +860,48 @@ TextureImporter:
       bones: []
       spriteID: af94a67dc365c46c0800000000000000
       internalID: -4157853536657716742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannonball_Raw
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc2187ba5f8e07c0800000000000000
+      internalID: -4103184590699418448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannonball_OnFire
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018dc9227cc053670800000000000000
+      internalID: 8517728319659890704
       vertices: []
       indices: 
       edges: []

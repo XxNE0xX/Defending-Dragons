@@ -23,10 +23,10 @@ public class EnemiesManager : MonoBehaviour
     /// <summary>
     /// Spawns a single enemy
     /// </summary>
-    /// <param name="enemyType"> The type of the enemy.</param>
+    /// <param name="enemyColor"> The type of the enemy.</param>
     /// <param name="enemyMoveDirection"> The direction of the enemy movement.</param>
     /// <returns> The enemy object that has been setup and is ready.</returns>
-    public Enemy SpawnAnEnemy(EnemyType enemyType, EnemyMoveDirection enemyMoveDirection)
+    public Enemy SpawnAnEnemy(EnemyColor enemyColor, EnemyMoveDirection enemyMoveDirection)
     {
         // Debug.Log("SpawnAnEnemy in EnemiesManager!");
         Enemy chosenEnemy;
@@ -49,7 +49,7 @@ public class EnemiesManager : MonoBehaviour
         }
         
         // Setting the enemy type and its direction based on the inputs
-        chosenEnemy.EnemyType = enemyType;
+        chosenEnemy.EnemyColor = enemyColor;
         chosenEnemy.EnemyMoveDirection = enemyMoveDirection;
         
         // Continue with the local settings that are needed to be set in Enemy object, including starting its movement

@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
 
     private SpriteRenderer _spriteRenderer;
-    private EnemyType _enemyType;
+    private EnemyColor _enemyColor;
     private EnemyMoveDirection _enemyMoveDirection;
     private EnemyStatus _status;
     private EnemyMotionManager _motionManager;
@@ -24,22 +24,22 @@ public class Enemy : MonoBehaviour
     /// <summary>
     /// Upon setting the enemy type, its color will change accordingly
     /// </summary>
-    public EnemyType EnemyType
+    public EnemyColor EnemyColor
     {
-        get => _enemyType;
+        get => _enemyColor;
         set
         {
-            _enemyType = value;
-            _spriteRenderer.color = _enemyType switch
+            _enemyColor = value;
+            _spriteRenderer.color = _enemyColor switch
             {
-                EnemyType.Blue => new Color32(0, 204, 255, 255),
-                EnemyType.Red => new Color32(255, 76, 81, 255),
-                EnemyType.Yellow => Color.yellow,
-                EnemyType.Green => new Color32(102, 255, 76, 255),
-                EnemyType.Purple => new Color32(255, 0, 255, 255),
-                EnemyType.Orange => new Color32(255, 116, 0, 255),
-                EnemyType.Black => new Color32(130, 130, 130, 255),
-                _ => Color.black
+                EnemyColor.Blue => Statics.Blue,
+                EnemyColor.Red => Statics.Red,
+                EnemyColor.Yellow => Statics.Yellow,
+                EnemyColor.Green => Statics.Green,
+                EnemyColor.Purple => Statics.Purple,
+                EnemyColor.Orange => Statics.Orange,
+                EnemyColor.Black => Statics.Black,
+                _ => Statics.DefaultColor
             };
         }
     }
@@ -107,7 +107,7 @@ public class Enemy : MonoBehaviour
         transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.EnemyVerticalOffset, 0);
         
         // Resetting the properties of the enemy when backing to the pool 
-        EnemyType = EnemyType.Default;
+        EnemyColor = EnemyColor.Default;
         EnemyStatus = EnemyStatus.Default;
         EnemyMoveDirection = EnemyMoveDirection.Default;
 

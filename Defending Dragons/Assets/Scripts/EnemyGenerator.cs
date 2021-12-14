@@ -19,8 +19,8 @@ public class EnemyGenerator
     /// <param name="enemy"> The enemy that its type is being decided.</param>
     private static void EnemyTypeRandomizer(Enemy enemy)
     {
-        int rand = Random.Range(0, System.Enum.GetNames(typeof(EnemyType)).Length);
-        enemy.EnemyType = (EnemyType) rand;
+        int rand = Random.Range(0, System.Enum.GetNames(typeof(EnemyColor)).Length);
+        enemy.EnemyColor = (EnemyColor) rand;
     }
 
     /// <summary>

@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.Red, EnemyMoveDirection.MarchLeft));
-        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyType.Blue, EnemyMoveDirection.MarchRight));
+        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyColor.Red, EnemyMoveDirection.MarchLeft));
+        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyColor.Blue, EnemyMoveDirection.MarchRight));
         
         StartCoroutine(DespawnTempFunction(10, 0));
         StartCoroutine(DespawnTempFunction(12, 1));
