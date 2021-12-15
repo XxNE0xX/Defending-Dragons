@@ -6,25 +6,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private EnemiesManager _enemiesManager;
+    [SerializeField] private EnemiesManager enemiesManager;
+    [SerializeField] private CannonballsManager cannonballsManager;
     private List<Enemy> _enemiesList;
     
 
     private void Awake()
     {
-        _enemiesManager = GameObject.FindWithTag("EnemiesManager").GetComponent<EnemiesManager>();
-        
         _enemiesList = new List<Enemy>();
     }
 
     void Start()
     {
 
-        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyColor.Red, EnemyMoveDirection.MarchLeft));
-        _enemiesList.Add(_enemiesManager.SpawnAnEnemy(EnemyColor.Blue, EnemyMoveDirection.MarchRight));
+        _enemiesList.Add(enemiesManager.SpawnAnEnemy(EnemyColor.Red, EnemyMoveDirection.MarchLeft));
+        _enemiesList.Add(enemiesManager.SpawnAnEnemy(EnemyColor.Blue, EnemyMoveDirection.MarchRight));
+
+        // cannonballsManager.SpawnACannonball(EnemyColor.Default, new Vector3(6, 3, 0));
         
-        StartCoroutine(DespawnTempFunction(10, 0));
-        StartCoroutine(DespawnTempFunction(12, 1));
+        // StartCoroutine(DespawnTempFunction(10, 0));
+        // StartCoroutine(DespawnTempFunction(12, 1));
 
     }
 
@@ -38,6 +39,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
  
-        _enemiesManager.DespawnAnEnemy(_enemiesList[index]);
+        enemiesManager.DespawnAnEnemy(_enemiesList[index]);
     }
 }

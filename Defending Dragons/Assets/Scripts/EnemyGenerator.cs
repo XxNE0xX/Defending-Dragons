@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGenerator
+public class EnemyGenerator : PoolGenerator
 {
     private Enemy _pfEnemy;
     
     /// <summary>
     /// Initializes the generator.
     /// </summary>
-    public void Init()
+    public new void Init()
     {
         _pfEnemy = GameAssets.I.pfEnemy;
+        base.prefab = _pfEnemy.gameObject;
     }
 
     /// <summary>
@@ -29,16 +30,9 @@ public class EnemyGenerator
     /// <param name="idleEnemies"> The list that keeps spawned objects.</param>
     /// <param name="enemiesPool"> The object of the pool for enemies.</param>
     /// <param name="enemiesCount"> Number of enemies that are going to be in the pool.</param>
-    public void GenerateEnemies(List<Enemy> idleEnemies, GameObject enemiesPool, int enemiesCount)
+    public void GenerateObjects(List<GameObject> idleEnemies, GameObject enemiesPool, int enemiesCount)
     {
-        for (int i = 0; i < enemiesCount; i++)
-        {
-            Enemy enemy = Object.Instantiate(_pfEnemy, enemiesPool.transform, true);
-            enemy.name = "Enemy" + i;
-            enemy.transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.EnemyVerticalOffset, 0);
-            idleEnemies.Add(enemy);
-        }
-
+        base.GenerateObjects(idleEnemies, enemiesPool, enemiesCount, "Enemy");
     }
 
 }

@@ -24,6 +24,10 @@ public class EnemyDetectionManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Updates the motionManager so the enemy stops moving.
+    /// Also updates the status of the enemy to attacking mode. 
+    /// </summary>
     private void InformOtherComponents()
     {
         _motionManager.CollisionWithCastle();

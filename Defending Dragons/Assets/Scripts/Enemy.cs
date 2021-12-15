@@ -85,12 +85,12 @@ public class Enemy : MonoBehaviour
         if (_enemyMoveDirection == EnemyMoveDirection.MarchLeft)
         {
             transform.position = new Vector3(Statics.ScreenEdgeX + Statics.EnemySpawnOffset, 
-                                             Statics.EnemyVerticalOffset, 0);
+                                             Statics.PoolVerticalOffset, 0);
         }
         else if (_enemyMoveDirection == EnemyMoveDirection.MarchRight)
         {
             transform.position = new Vector3(-Statics.ScreenEdgeX - Statics.EnemySpawnOffset, 
-                                             Statics.EnemyVerticalOffset, 0);
+                                             Statics.PoolVerticalOffset, 0);
         }
 
         _motionManager.Moving = true;
@@ -104,7 +104,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     public void Despawn()
     {
-        transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.EnemyVerticalOffset, 0);
+        transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.PoolVerticalOffset, 0);
         
         // Resetting the properties of the enemy when backing to the pool 
         EnemyColor = EnemyColor.Default;
@@ -117,6 +117,6 @@ public class Enemy : MonoBehaviour
     private void StartAttacking()
     {
         // Start damaging the castle
+        Statics.LogWarningMethodNotImplemented("StartAttacking");
     }
-
 }

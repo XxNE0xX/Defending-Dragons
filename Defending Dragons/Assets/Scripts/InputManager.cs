@@ -5,6 +5,8 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
 
+    [SerializeField] private CannonballsManager _cannonballsManager; 
+
     // Update is called once per frame
     void Update()
     {
@@ -14,8 +16,11 @@ public class InputManager : MonoBehaviour
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPosition.z = 0;
 
-            DamagePopup.Create(mouseWorldPosition, 
-                Random.Range(Statics.MinEnemyDamage, Statics.MaxEnemyDamage), true);
+            // DamagePopup.Create(mouseWorldPosition, 
+            //     Random.Range(Statics.MinEnemyDamage, Statics.MaxEnemyDamage), true);
+
+            _cannonballsManager.SpawnACannonball(EnemyColor.Red, mouseWorldPosition);
+
         }
     }
 }
