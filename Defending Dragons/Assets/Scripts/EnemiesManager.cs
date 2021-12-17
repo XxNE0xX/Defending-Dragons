@@ -58,8 +58,8 @@ public class EnemiesManager : MonoBehaviour
         // Adding the chosen enemy to the list of the active enemies
         _activeEnemies.Add(chosenEnemy);
 
-        
-        // Debug.Log("Active enemies count: " + _activeEnemies.Count);
+        // Set the parent as the current enemy manager
+        chosenEnemy.transform.SetParent(transform);
 
         return chosenEnemy;
     }
@@ -76,6 +76,9 @@ public class EnemiesManager : MonoBehaviour
             // Removing the enemy from the active stack and piling it up on the idle stack
             _activeEnemies.Remove(enemy);
             _idleEnemies.Add(enemy.gameObject);
+            
+            // Set the parent as the enemy pool again
+            enemy.transform.SetParent(enemiesPool.transform);
             
             // Finalizing the process by calling the local despawn
             enemy.Despawn();

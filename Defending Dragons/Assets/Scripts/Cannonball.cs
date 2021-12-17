@@ -98,10 +98,12 @@ public class Cannonball : MonoBehaviour
     /// Setting the position of the object to the given position.
     /// Setting the gravity value to non zero.
     /// </summary>
-    public void Spawn(Vector3 position)
+    public void Spawn(Vector3 position, float gravity, float mass, Vector2 initialForce)
     {
         transform.position = position;
-        _rb.gravityScale = Statics.CannonballsGravity;
+        _rb.gravityScale = gravity;
+        _rb.mass = mass;
+        _rb.AddForce(initialForce);
     }
 
     /// <summary>

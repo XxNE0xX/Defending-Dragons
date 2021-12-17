@@ -39,10 +39,6 @@ public class Statics
     public const float GROUND_TILES_SIZE = 1f;
     public const float THRESHOLD_MARGIN_FOR_EXPLOSION = 0.1f;
     
-    // Cannonballs
-    public static readonly int BaseCannonballsCountInPool = 15;
-    public static readonly int AddMoreCannonballsToPoolCount = 5;
-    public static readonly float CannonballsGravity = 0.2f;
 
     public static void LogWarningMethodNotImplemented(string name)
     {

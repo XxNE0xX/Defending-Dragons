@@ -25,13 +25,13 @@ TextureImporter:
     second: Tile Atlas_6
   - first:
       213: 6762473081782024912
-    second: Wall_Corner_100
+    second: Tile Atlas_7
   - first:
       213: -1244223586798054502
-    second: Gate_Top
+    second: Tile Atlas_8
   - first:
       213: -3378612296315141902
-    second: Gate_Bot
+    second: Tile Atlas_9
   - first:
       213: 8110483918751813918
     second: Tile Atlas_10
@@ -49,58 +49,382 @@ TextureImporter:
     second: Tile Atlas_14
   - first:
       213: 8891700440301774446
-    second: Wall_Corner_010
+    second: Tile Atlas_15
   - first:
       213: 9118351781383355141
-    second: Wall_Corner_001
+    second: Tile Atlas_16
   - first:
       213: 7389551175589713177
-    second: Wall_Corner_200
+    second: Tile Atlas_17
   - first:
       213: 1589809921929538992
-    second: Wall_Center
+    second: Tile Atlas_18
   - first:
       213: 196124836415628893
-    second: Wall_Corner_002
+    second: Tile Atlas_19
   - first:
       213: -5035062739983266043
-    second: Wall_Corner_300
+    second: InsideWall10
   - first:
       213: -58103537399957311
-    second: Wall_Corner_030
+    second: InsideWall11
   - first:
       213: 1258937829860088317
-    second: Wall_Corner_003
+    second: Gate11
   - first:
       213: 8847203668149681582
-    second: Wall_Edge_North
+    second: Gate12
   - first:
       213: 8561060038467849295
-    second: Wall_Full
+    second: Gate13
   - first:
       213: 6474872599153233231
-    second: Wall_Edge_West
+    second: Tile Atlas_25
   - first:
       213: 2614737343503639839
-    second: Wall_Edge_Vertical_Center
+    second: Tile Atlas_26
   - first:
       213: -8143959076805724399
-    second: Wall_Edge_East
+    second: Tile Atlas_27
   - first:
       213: 2999782887838618308
-    second: Wall_Edge_South
+    second: Tile Atlas_28
   - first:
       213: -3980377464221934989
-    second: Wall_Edge_Horizontal_Center
+    second: Tile Atlas_29
   - first:
       213: -4157853536657716742
-    second: Wall_Inside
+    second: Tile Atlas_30
   - first:
       213: -4103184590699418448
     second: Cannonball_Raw
   - first:
       213: 8517728319659890704
     second: Cannonball_OnFire
+  - first:
+      213: 3423571439036698030
+    second: Cannonball_Explosion1
+  - first:
+      213: 3615680584047954309
+    second: Cannonball_Explosion2
+  - first:
+      213: 1852207924269641140
+    second: Cannonball_Explosion3
+  - first:
+      213: -2687818151232992260
+    second: Cannonball_Explosion4
+  - first:
+      213: 1985922944504865985
+    second: Cannon_10
+  - first:
+      213: -8167254241136743655
+    second: Cannon_11
+  - first:
+      213: 1098986203951100178
+    second: Tile Atlas_39
+  - first:
+      213: -3139115515549102070
+    second: Tile Atlas_40
+  - first:
+      213: 7904578754211947744
+    second: InsideWall20
+  - first:
+      213: 5596587358471456618
+    second: InsideWall21
+  - first:
+      213: 5550381234681207079
+    second: Gate20
+  - first:
+      213: -3675610773389248077
+    second: Gate21
+  - first:
+      213: 3544045876237332990
+    second: Gate22
+  - first:
+      213: 1379728658726008088
+    second: Gate23
+  - first:
+      213: -5337380757260876505
+    second: Tile Atlas_47
+  - first:
+      213: -2344349021607939653
+    second: Tile Atlas_48
+  - first:
+      213: -7037710478629232484
+    second: Tile Atlas_49
+  - first:
+      213: 3130434796771088839
+    second: Tile Atlas_50
+  - first:
+      213: 5067366285428725599
+    second: Tile Atlas_51
+  - first:
+      213: 7373484295242514583
+    second: Tile Atlas_52
+  - first:
+      213: 5150660716978672324
+    second: Tile Atlas_53
+  - first:
+      213: 8551937046184621120
+    second: Tile Atlas_54
+  - first:
+      213: -6326529437169198301
+    second: Gate30
+  - first:
+      213: 1515467728069677772
+    second: Gate31
+  - first:
+      213: -5170572232976700527
+    second: Gate32
+  - first:
+      213: -2997444008728934073
+    second: Gate33
+  - first:
+      213: -3232650379167531416
+    second: Tile Atlas_59
+  - first:
+      213: 3966129181175453062
+    second: Tile Atlas_60
+  - first:
+      213: 2602797309711548356
+    second: Tile Atlas_61
+  - first:
+      213: -2403112885759811952
+    second: Tile Atlas_62
+  - first:
+      213: 1179881756545160743
+    second: Tile Atlas_63
+  - first:
+      213: -6445846269106555246
+    second: Tile Atlas_64
+  - first:
+      213: 7529042856819317867
+    second: Tile Atlas_65
+  - first:
+      213: -809909037603898222
+    second: Tile Atlas_66
+  - first:
+      213: 4935503336840692239
+    second: Gate40
+  - first:
+      213: -8071762733997447238
+    second: Gate41
+  - first:
+      213: -7319933024749529223
+    second: Gate42
+  - first:
+      213: -439312755730994686
+    second: Gate43
+  - first:
+      213: 7233076370851253528
+    second: Tile Atlas_71
+  - first:
+      213: -8778329830899726939
+    second: Tile Atlas_72
+  - first:
+      213: 6901490065891437912
+    second: Tile Atlas_73
+  - first:
+      213: 4299066256731750716
+    second: Tile Atlas_74
+  - first:
+      213: -5730839893106276500
+    second: Tile Atlas_75
+  - first:
+      213: 1550717870634544998
+    second: Tile Atlas_76
+  - first:
+      213: 2210808672076305577
+    second: Tile Atlas_77
+  - first:
+      213: -1227774615919966307
+    second: Tile Atlas_78
+  - first:
+      213: 6245444939558341487
+    second: Tile Atlas_79
+  - first:
+      213: 577317370322059759
+    second: Tile Atlas_80
+  - first:
+      213: 3146130352876004854
+    second: Tile Atlas_81
+  - first:
+      213: -4735270067207470803
+    second: Tile Atlas_82
+  - first:
+      213: 2807141133241034297
+    second: Gate50
+  - first:
+      213: 8420399787551653865
+    second: Gate51
+  - first:
+      213: 7327931581086887724
+    second: Gate52
+  - first:
+      213: 2321393160730676366
+    second: Gate53
+  - first:
+      213: -1310499204797004859
+    second: Tile Atlas_87
+  - first:
+      213: -9003807630299474252
+    second: Tile Atlas_88
+  - first:
+      213: 7051939844217966851
+    second: Tile Atlas_89
+  - first:
+      213: -6251044434009144754
+    second: Tile Atlas_90
+  - first:
+      213: 689847529729296262
+    second: Tile Atlas_91
+  - first:
+      213: -6514207576527617319
+    second: Tile Atlas_92
+  - first:
+      213: 2898583610119459460
+    second: Tile Atlas_93
+  - first:
+      213: -5075104489962047045
+    second: Tile Atlas_94
+  - first:
+      213: -2865131175625535576
+    second: Tile Atlas_95
+  - first:
+      213: -5408633144157613489
+    second: Tile Atlas_96
+  - first:
+      213: 4422834041649243214
+    second: Tile Atlas_97
+  - first:
+      213: -6615784595483830558
+    second: Tile Atlas_98
+  - first:
+      213: 5165079960244087330
+    second: Gate60
+  - first:
+      213: -5715854483884048657
+    second: Gate61
+  - first:
+      213: -3781316994477134544
+    second: Gate62
+  - first:
+      213: -4667326593217196019
+    second: Gate63
+  - first:
+      213: 7132047883751421610
+    second: Tile Atlas_103
+  - first:
+      213: -6636107488910182057
+    second: Tile Atlas_104
+  - first:
+      213: -5234168732425211450
+    second: Tile Atlas_105
+  - first:
+      213: 7510786147126747664
+    second: Tile Atlas_106
+  - first:
+      213: 8861103863893424514
+    second: Tile Atlas_107
+  - first:
+      213: 1757772063391564025
+    second: Tile Atlas_108
+  - first:
+      213: -4600944287011390110
+    second: Tile Atlas_109
+  - first:
+      213: 4592243331382195124
+    second: Tile Atlas_110
+  - first:
+      213: -7068437403487633489
+    second: Tile Atlas_111
+  - first:
+      213: 7873726263077986232
+    second: Tile Atlas_112
+  - first:
+      213: -2265869684391781078
+    second: Tile Atlas_113
+  - first:
+      213: 5465872501004196622
+    second: Tile Atlas_114
+  - first:
+      213: -5859313692012436354
+    second: Gate70
+  - first:
+      213: -324408119627336053
+    second: Gate71
+  - first:
+      213: -1349733712630502194
+    second: Gate72
+  - first:
+      213: 76730030484999021
+    second: Gate73
+  - first:
+      213: 3983883160374674330
+    second: Tile Atlas_119
+  - first:
+      213: 8932267686426677654
+    second: Tile Atlas_120
+  - first:
+      213: -2910212795218113884
+    second: Tile Atlas_121
+  - first:
+      213: -2580478068954894547
+    second: Tile Atlas_122
+  - first:
+      213: 609693191066125983
+    second: Tile Atlas_123
+  - first:
+      213: -349043146470422668
+    second: Tile Atlas_124
+  - first:
+      213: -3629816037950766498
+    second: Tile Atlas_125
+  - first:
+      213: -1647070864404041342
+    second: Tile Atlas_126
+  - first:
+      213: -954083889057447457
+    second: Tile Atlas_127
+  - first:
+      213: 304971059673869413
+    second: Tile Atlas_128
+  - first:
+      213: -2594104376395434042
+    second: Tile Atlas_129
+  - first:
+      213: 4820617434326086693
+    second: Tile Atlas_130
+  - first:
+      213: -4397414553710704537
+    second: Gate80
+  - first:
+      213: -2832948364087896866
+    second: Gate81
+  - first:
+      213: 8838290385816003880
+    second: Gate82
+  - first:
+      213: 9210239948515135205
+    second: Gate83
+  - first:
+      213: 8702770279658223926
+    second: Cannon_12
+  - first:
+      213: -7486742242105229265
+    second: Cannon_13
+  - first:
+      213: 9186106037779749325
+    second: Cannon_20
+  - first:
+      213: 6484110854285581968
+    second: Cannon_21
+  - first:
+      213: 8388339538977470521
+    second: Cannon_22
+  - first:
+      213: 9140904231284833220
+    second: Cannon_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -361,13 +685,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_100
+      name: Tile Atlas_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 400
-        width: 16
-        height: 16
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,13 +706,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gate_Top
+      name: Tile Atlas_8
       rect:
         serializedVersion: 2
-        x: 159
-        y: 384
-        width: 32
-        height: 32
+        x: 8
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,8 +730,8 @@ TextureImporter:
       name: Tile Atlas_10
       rect:
         serializedVersion: 2
-        x: 224
-        y: 352
+        x: 64
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -427,8 +751,8 @@ TextureImporter:
       name: Tile Atlas_11
       rect:
         serializedVersion: 2
-        x: 256
-        y: 352
+        x: 96
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -448,8 +772,8 @@ TextureImporter:
       name: Enemy_Size0
       rect:
         serializedVersion: 2
-        x: 288
-        y: 352
+        x: 128
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -466,13 +790,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gate_Bot
+      name: Tile Atlas_9
       rect:
         serializedVersion: 2
-        x: 159
-        y: 352
-        width: 32
-        height: 32
+        x: 16
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,8 +814,8 @@ TextureImporter:
       name: Tile Atlas_13
       rect:
         serializedVersion: 2
-        x: 224
-        y: 320
+        x: 64
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -511,8 +835,8 @@ TextureImporter:
       name: Tile Atlas_14
       rect:
         serializedVersion: 2
-        x: 256
-        y: 320
+        x: 96
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -529,13 +853,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_010
+      name: Tile Atlas_15
       rect:
         serializedVersion: 2
-        x: 16
-        y: 400
-        width: 16
-        height: 16
+        x: 24
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,13 +874,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_001
+      name: Tile Atlas_16
       rect:
         serializedVersion: 2
         x: 32
-        y: 400
-        width: 16
-        height: 16
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,13 +895,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_200
+      name: Tile Atlas_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
-        width: 16
-        height: 16
+        x: 40
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,13 +916,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Fill
+      name: Tile Atlas_18
       rect:
         serializedVersion: 2
-        x: 16
-        y: 384
-        width: 16
-        height: 16
+        x: 48
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -613,13 +937,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_002
+      name: Tile Atlas_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 384
-        width: 16
-        height: 16
+        x: 56
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,13 +958,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_300
+      name: InsideWall10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 368
-        width: 16
-        height: 16
+        x: 64
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,13 +979,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_030
+      name: InsideWall11
       rect:
         serializedVersion: 2
-        x: 16
-        y: 368
-        width: 16
-        height: 16
+        x: 72
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -676,13 +1000,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Corner_003
+      name: Gate11
       rect:
         serializedVersion: 2
-        x: 32
-        y: 368
-        width: 16
-        height: 16
+        x: 104
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,13 +1021,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Edge_North
+      name: Gate12
       rect:
         serializedVersion: 2
-        x: 48
-        y: 400
-        width: 16
-        height: 16
+        x: 112
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -718,13 +1042,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Full
+      name: Gate13
       rect:
         serializedVersion: 2
-        x: 48
-        y: 352
-        width: 16
-        height: 16
+        x: 120
+        y: 408
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -739,13 +1063,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Edge_West
+      name: Tile Atlas_25
       rect:
         serializedVersion: 2
         x: 0
-        y: 352
-        width: 16
-        height: 16
+        y: 400
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -760,13 +1084,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Edge_East
+      name: Tile Atlas_27
       rect:
         serializedVersion: 2
-        x: 32
-        y: 352
-        width: 16
-        height: 16
+        x: 16
+        y: 400
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -781,13 +1105,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Edge_South
+      name: Tile Atlas_28
       rect:
         serializedVersion: 2
-        x: 48
-        y: 368
-        width: 16
-        height: 16
+        x: 24
+        y: 400
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,13 +1126,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Edge_Vertical_Center
+      name: Tile Atlas_26
       rect:
         serializedVersion: 2
-        x: 48
-        y: 384
-        width: 16
-        height: 16
+        x: 8
+        y: 400
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,13 +1147,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Edge_Horizontal_Center
+      name: Tile Atlas_29
       rect:
         serializedVersion: 2
-        x: 16
-        y: 352
-        width: 16
-        height: 16
+        x: 32
+        y: 400
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,13 +1168,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_Inside
+      name: Tile Atlas_30
       rect:
         serializedVersion: 2
-        x: 64
+        x: 40
         y: 400
-        width: 16
-        height: 16
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -868,8 +1192,8 @@ TextureImporter:
       name: Cannonball_Raw
       rect:
         serializedVersion: 2
-        x: 208
-        y: 352
+        x: 0
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -889,7 +1213,7 @@ TextureImporter:
       name: Cannonball_OnFire
       rect:
         serializedVersion: 2
-        x: 208
+        x: 16
         y: 336
         width: 16
         height: 16
@@ -902,6 +1226,2274 @@ TextureImporter:
       bones: []
       spriteID: 018dc9227cc053670800000000000000
       internalID: 8517728319659890704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannonball_Explosion1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead84feb518f28f20800000000000000
+      internalID: 3423571439036698030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannonball_Explosion2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5898471a55a7d2230800000000000000
+      internalID: 3615680584047954309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannonball_Explosion3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd61403b4d54b910800000000000000
+      internalID: 1852207924269641140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannonball_Explosion4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb09e2d1a3f2bad0800000000000000
+      internalID: -2687818151232992260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4a28a656a6f8b10800000000000000
+      internalID: 1985922944504865985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 328
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bedb62a8518ae80800000000000000
+      internalID: -8167254241136743655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2117f8b3122604f00800000000000000
+      internalID: 1098986203951100178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0057c2021f9f64d0800000000000000
+      internalID: -3139115515549102070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InsideWall20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e427e72f74b2bd60800000000000000
+      internalID: 7904578754211947744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InsideWall21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a670220fc821bad40800000000000000
+      internalID: 5596587358471456618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729da25635ae60d40800000000000000
+      internalID: 5550381234681207079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate21
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9f88fc97b9dfcc0800000000000000
+      internalID: -3675610773389248077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef170d082fafe2130800000000000000
+      internalID: 3544045876237332990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8153acda7e7c52310800000000000000
+      internalID: 1379728658726008088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725c57cda70dde5b0800000000000000
+      internalID: -5337380757260876505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb136895cf2377fd0800000000000000
+      internalID: -2344349021607939653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90a2496b97055e90800000000000000
+      internalID: -7037710478629232484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c91016acd9817b20800000000000000
+      internalID: 3130434796771088839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5715cdd9c6e25640800000000000000
+      internalID: 5067366285428725599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7900ade66e0e35660800000000000000
+      internalID: 7373484295242514583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2921af1a2da7740800000000000000
+      internalID: 5150660716978672324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0447653fe659ea670800000000000000
+      internalID: 8551937046184621120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b5a7c0ff6a338a0800000000000000
+      internalID: -6326529437169198301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate31
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc259209ed5080510800000000000000
+      internalID: 1515467728069677772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate32
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19becefe2ff6e38b0800000000000000
+      internalID: -5170572232976700527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate33
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749c6912e80f666d0800000000000000
+      internalID: -2997444008728934073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86effa28b915323d0800000000000000
+      internalID: -3232650379167531416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68516411a758a0730800000000000000
+      internalID: 3966129181175453062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cff2bbec5efe1420800000000000000
+      internalID: 2602797309711548356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e5f19009d66aed0800000000000000
+      internalID: -2403112885759811952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72696dfc438cf5010800000000000000
+      internalID: 1179881756545160743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296702548f0cb86a0800000000000000
+      internalID: -6445846269106555246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c586376988c7860800000000000000
+      internalID: 7529042856819317867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cbd397500a2c4f0800000000000000
+      internalID: -809909037603898222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02052ca22e6e7440800000000000000
+      internalID: 4935503336840692239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate41
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7a8d83f865bff80800000000000000
+      internalID: -8071762733997447238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate42
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977572852bf5a6a90800000000000000
+      internalID: -7319933024749529223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate43
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a2b51506f37e9f0800000000000000
+      internalID: -439312755730994686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d4cd503ac016460800000000000000
+      internalID: 7233076370851253528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5c104478b1d2680800000000000000
+      internalID: -8778329830899726939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85da85636a407cf50800000000000000
+      internalID: 6901490065891437912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c314d5aabf959ab30800000000000000
+      internalID: 4299066256731750716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6743c20b77f770b0800000000000000
+      internalID: -5730839893106276500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fa502ffa1458510800000000000000
+      internalID: 1550717870634544998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4167d16ce5eae10800000000000000
+      internalID: 2210808672076305577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9749d9ed7116fee0800000000000000
+      internalID: -1227774615919966307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bc2ae25174ca650800000000000000
+      internalID: 6245444939558341487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe185bce61b030800800000000000000
+      internalID: 577317370322059759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5af3413ec49ab20800000000000000
+      internalID: 3146130352876004854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d210f8066f0f84eb0800000000000000
+      internalID: -4735270067207470803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9362831ecf7f4f620800000000000000
+      internalID: 2807141133241034297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate51
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef7acb5ef44bd470800000000000000
+      internalID: 8420399787551653865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fec0da2fa02b560800000000000000
+      internalID: 7327931581086887724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate53
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c8f59c7ce373020800000000000000
+      internalID: 2321393160730676366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c384a3aaeb20dde0800000000000000
+      internalID: -1310499204797004859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_88
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b65c0a1aac0c0380800000000000000
+      internalID: -9003807630299474252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_89
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3011900fce58dd160800000000000000
+      internalID: 7051939844217966851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_90
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42c3bbe434df39a0800000000000000
+      internalID: -6251044434009144754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_91
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68702be5ca4d29900800000000000000
+      internalID: 689847529729296262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_92
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2c9ef09b2e895a0800000000000000
+      internalID: -6514207576527617319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_93
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48290f0af66d93820800000000000000
+      internalID: 2898583610119459460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_94
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb972ddfa5b9199b0800000000000000
+      internalID: -5075104489962047045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_95
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af41f930620d38d0800000000000000
+      internalID: -2865131175625535576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_96
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42d412cfcca0f4b0800000000000000
+      internalID: -5408633144157613489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_97
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e442201b020116d30800000000000000
+      internalID: 4422834041649243214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_98
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e65fab56f20034a0800000000000000
+      internalID: -6615784595483830558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a66daabdc0ea740800000000000000
+      internalID: 5165079960244087330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate61
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee744c71a43da0b0800000000000000
+      internalID: -5715854483884048657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate62
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03dea015a30168bc0800000000000000
+      internalID: -3781316994477134544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate63
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d001e8821335a3fb0800000000000000
+      internalID: -4667326593217196019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_103
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6741853cf1af260800000000000000
+      internalID: 7132047883751421610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_104
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759f230066fc7e3a0800000000000000
+      internalID: -6636107488910182057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_105
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1b659054f7c57b0800000000000000
+      internalID: -5234168732425211450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_106
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0122a6bf43cab3860800000000000000
+      internalID: 7510786147126747664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_107
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289753d1407f8fa70800000000000000
+      internalID: 8861103863893424514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_108
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f04f8ae06cd46810800000000000000
+      internalID: 1757772063391564025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_109
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db25d3c892620c0800000000000000
+      internalID: -4600944287011390110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_110
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b33139aafceabf30800000000000000
+      internalID: 4592243331382195124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_111
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faff808b1add7ed90800000000000000
+      internalID: -7068437403487633489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_112
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf5d69c158154d60800000000000000
+      internalID: 7873726263077986232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_113
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d5082f6830e80e0800000000000000
+      internalID: -2265869684391781078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_114
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b5ee9841eaadb40800000000000000
+      internalID: 5465872501004196622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e742408bd398faea0800000000000000
+      internalID: -5859313692012436354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate71
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b863c53b8887f7bf0800000000000000
+      internalID: -324408119627336053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate72
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc2a4de658c44de0800000000000000
+      internalID: -1349733712630502194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate73
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 360
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bc9a26e89901100800000000000000
+      internalID: 76730030484999021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a930bc870a8994730800000000000000
+      internalID: 3983883160374674330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_120
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6919928b22ac5fb70800000000000000
+      internalID: 8932267686426677654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_121
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa4a38b1e8dc97d0800000000000000
+      internalID: -2910212795218113884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_122
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fe1454edc403cd0800000000000000
+      internalID: -2580478068954894547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_123
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96887b1ab0167800800000000000000
+      internalID: 609693191066125983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_124
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477885b8b13f72bf0800000000000000
+      internalID: -349043146470422668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_125
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52cde98b8d40adc0800000000000000
+      internalID: -3629816037950766498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_126
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2813d4f76cd6429e0800000000000000
+      internalID: -1647070864404041342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_127
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1cec202c962c2f0800000000000000
+      internalID: -954083889057447457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_128
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ca2ae10997b3400800000000000000
+      internalID: 304971059673869413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_129
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7f9a650d3effbd0800000000000000
+      internalID: -2594104376395434042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile Atlas_130
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524bf0b040646e240800000000000000
+      internalID: 4820617434326086693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate80
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768c0fb03ce39f2c0800000000000000
+      internalID: -4397414553710704537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate81
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed45483f8785fa8d0800000000000000
+      internalID: -2832948364087896866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate82
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8252054574ae7aa70800000000000000
+      internalID: 8838290385816003880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate83
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 352
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee4b5b6f6851df70800000000000000
+      internalID: 9210239948515135205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 328
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639fad8c57376c870800000000000000
+      internalID: 8702770279658223926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 328
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f200866e89fb91890800000000000000
+      internalID: -7486742242105229265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9dee275ca9b7f70800000000000000
+      internalID: 9186106037779749325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 320
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e52f9b7703cf950800000000000000
+      internalID: 6484110854285581968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 320
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938bd1c0e5e596470800000000000000
+      internalID: 8388339538977470521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_23
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 320
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbf89fb7f30bde70800000000000000
+      internalID: 9140904231284833220
       vertices: []
       indices: 
       edges: []

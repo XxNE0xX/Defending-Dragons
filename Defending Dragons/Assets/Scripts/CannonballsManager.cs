@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -9,15 +10,25 @@ public class CannonballsManager : MonoBehaviour
     [SerializeField] private GameObject cannonballsPool;
     [SerializeField] private Tilemap groundTiles;
     [SerializeField] private EnemiesManager enemiesManager;
+    [SerializeField] private int baseCannonballsCountInPool = 15;
+    [SerializeField] private int addMoreCannonballsToPoolCount = 5;
+    [SerializeField] private float cannonballsGravity = 2f; 
+    [SerializeField] private float cannonballWidth = 0.3125f;
+    [SerializeField] private float cannonballWeight = 0.5f;
+    
     private List<GameObject> _idleCannonballs;
     private List<Cannonball> _activeCannonballs;
-    
+
+    public float CannonballsGravity => cannonballsGravity;
+    public float CannonballWidth => cannonballWidth;
+    public float CannonballWeight => cannonballWeight;
+
     private void Awake()
     {
         _cannonballGenerator = new CannonballGenerator();
         _cannonballGenerator.Init();
         _idleCannonballs = new List<GameObject>();
-        GeneratePoolObjects(Statics.BaseCannonballsCountInPool);
+        GeneratePoolObjects(baseCannonballsCountInPool);
         _activeCannonballs = new List<Cannonball>();
     }
 
@@ -36,6 +47,7 @@ public class CannonballsManager : MonoBehaviour
             cannonball.CannonballsManager = this;
             cannonball.GroundTiles = groundTiles;
             cannonball.EnemiesManager = enemiesManager;
+            cannonball.GetComponent<Rigidbody2D>().mass = cannonballWeight;
         }
     }
     
@@ -43,7 +55,7 @@ public class CannonballsManager : MonoBehaviour
     /// Spawns a single enemy
     /// </summary>
     /// <returns> The cannonball object that has been setup and is ready.</returns>
-    public Cannonball SpawnACannonball(EnemyColor color, Vector3 position)
+    public Cannonball SpawnACannonball(EnemyColor color, Vector3 position, Vector2 initialForce)
     {
         Cannonball chosenCannonball;
         
@@ -58,13 +70,13 @@ public class CannonballsManager : MonoBehaviour
         // otherwise, if there is no idle cannonball, we spawn some more to the pool and then choose one
         else
         {
-            GeneratePoolObjects(Statics.AddMoreCannonballsToPoolCount);
+            GeneratePoolObjects(addMoreCannonballsToPoolCount);
             chosenCannonball = _idleCannonballs[_idleCannonballs.Count - 1].GetComponent<Cannonball>();
             _idleCannonballs.RemoveAt(_idleCannonballs.Count - 1);
         }
 
         chosenCannonball.EnemyColor = color;
-        chosenCannonball.Spawn(position);
+        chosenCannonball.Spawn(position, cannonballsGravity, cannonballWeight, initialForce);
         
         // Adding the chosen cannonball to the list of the active cannonballs
         _activeCannonballs.Add(chosenCannonball);
