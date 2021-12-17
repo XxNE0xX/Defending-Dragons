@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Castle : MonoBehaviour
 {
-    [SerializeField] private float initialHealth;
-    private float _health;
+    [SerializeField] private int initialHealth = 10000;
+    private int _health;
 
     private void Awake()
     {
         _health = initialHealth;
+    }
+
+    public void Damage(int damageAmount)
+    {
+        _health -= damageAmount;
     }
 }

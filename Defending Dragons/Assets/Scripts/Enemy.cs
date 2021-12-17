@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Enemy : MonoBehaviour
     private EnemyMotionManager _motionManager;
     private EnemyDetectionManager _enemyDetectionManager;
 
+    private EnemiesManager _enemiesManager;
+    private Castle _castle;
+    
 
     private void Awake()
     {
@@ -43,7 +47,7 @@ public class Enemy : MonoBehaviour
             };
         }
     }
-    
+
     /// <summary>
     /// Upon setting the movement direction, the sprite will flip on its x-axis accordingly
     /// </summary>
@@ -61,7 +65,7 @@ public class Enemy : MonoBehaviour
             };
         }
     }
-    
+
     public EnemyStatus EnemyStatus
     {
         get => _status;
@@ -70,8 +74,7 @@ public class Enemy : MonoBehaviour
             _status = value;
             if (value == EnemyStatus.Attacking)
             {
-                StartAttacking();
-                _spriteRenderer.color = Color.magenta;
+                PrepareForAttacking();
             }
         }
     }
@@ -80,23 +83,26 @@ public class Enemy : MonoBehaviour
     /// Setting the position of the object to the edge of the screen.
     /// Starting the enemy movement mechanisms.
     /// </summary>
-    public void Spawn()
+    public void Spawn(EnemiesManager enemiesManager)
     {
+
+        _enemiesManager = enemiesManager;
+        
         if (_enemyMoveDirection == EnemyMoveDirection.MarchLeft)
         {
-            transform.position = new Vector3(Statics.ScreenEdgeX + Statics.EnemySpawnOffset, 
-                                             Statics.PoolVerticalOffset, 0);
+            transform.position = new Vector3(Statics.ScreenEdgeX + Statics.EnemySpawnOffset,
+                Statics.PoolVerticalOffset, 0);
         }
         else if (_enemyMoveDirection == EnemyMoveDirection.MarchRight)
         {
-            transform.position = new Vector3(-Statics.ScreenEdgeX - Statics.EnemySpawnOffset, 
-                                             Statics.PoolVerticalOffset, 0);
+            transform.position = new Vector3(-Statics.ScreenEdgeX - Statics.EnemySpawnOffset,
+                Statics.PoolVerticalOffset, 0);
         }
 
         _motionManager.Moving = true;
         _status = EnemyStatus.Marching;
     }
-    
+
     /// <summary>
     /// Sets the position of the object to the default pool position, out of players' sight;
     /// Stops the motion of the object;
@@ -104,8 +110,11 @@ public class Enemy : MonoBehaviour
     /// </summary>
     public void Despawn()
     {
-        transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.PoolVerticalOffset, 0);
+
+        _enemiesManager = null;
         
+        transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.PoolVerticalOffset, 0);
+
         // Resetting the properties of the enemy when backing to the pool 
         EnemyColor = EnemyColor.Default;
         EnemyStatus = EnemyStatus.Default;
@@ -114,9 +123,36 @@ public class Enemy : MonoBehaviour
         _motionManager.Moving = false;
     }
 
-    private void StartAttacking()
+
+    private void PrepareForAttacking()
     {
+        // Getting the castle object from the parent
+        _castle = _enemiesManager.Castle;
         // Start damaging the castle
-        Statics.LogWarningMethodNotImplemented("StartAttacking");
+        InvokeRepeating(nameof(Attack), 0f, _enemiesManager.DamageIntervals);
     }
+
+    private void Attack()
+    {
+
+        // If the enemy was marching to the right, the damage is supposed to pop up behind his head, therefore true
+        bool toLeft = _enemyMoveDirection == EnemyMoveDirection.MarchRight;
+        
+        int damageAmount = Random.Range(Statics.MinEnemyDamage, Statics.MaxEnemyDamage);
+
+        Vector3 damagePopupPosition = transform.position;
+
+        if (toLeft)
+        {
+            damagePopupPosition.x += 0.5f;
+        }
+        else
+        {
+            damagePopupPosition.x -= 0.5f;
+        }
+
+        _castle.Damage(damageAmount);
+        DamagePopup.Create(damagePopupPosition, damageAmount, toLeft);
+    }
+
 }

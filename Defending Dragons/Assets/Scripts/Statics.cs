@@ -19,7 +19,7 @@ public class Statics
     public static readonly int MaxEnemyDamage = 125;
     public static readonly int MinEnemyDamage = 50;
 
-    public static readonly float DisappearTimerMax = 3f;
+    public static readonly float DisappearTimerMax = 1.5f;
     
     // Minimum and maximum for the red color of the damage popup text
     public static readonly int MaxDamagePopupGreen = 230;
@@ -38,7 +38,6 @@ public class Statics
     // Tiles properties
     public const float GROUND_TILES_SIZE = 1f;
     public const float THRESHOLD_MARGIN_FOR_EXPLOSION = 0.1f;
-    
 
     public static void LogWarningMethodNotImplemented(string name)
     {

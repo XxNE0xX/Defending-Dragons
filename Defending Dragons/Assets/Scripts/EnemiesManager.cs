@@ -6,10 +6,19 @@ using UnityEngine.Serialization;
 
 public class EnemiesManager : MonoBehaviour
 {
-    private EnemyGenerator _enemyGenerator;
+    
     [SerializeField] private GameObject enemiesPool;
+    [SerializeField] private Castle castle;
+
+    [SerializeField] private float damageIntervals = 1f;
+    
+    private EnemyGenerator _enemyGenerator;
     private List<GameObject> _idleEnemies;
     private List<Enemy> _activeEnemies;
+
+    public Castle Castle => castle;
+    
+    public float DamageIntervals => damageIntervals;
 
     private void Awake()
     {
@@ -53,7 +62,7 @@ public class EnemiesManager : MonoBehaviour
         chosenEnemy.EnemyMoveDirection = enemyMoveDirection;
         
         // Continue with the local settings that are needed to be set in Enemy object, including starting its movement
-        chosenEnemy.Spawn();
+        chosenEnemy.Spawn(this);
         
         // Adding the chosen enemy to the list of the active enemies
         _activeEnemies.Add(chosenEnemy);

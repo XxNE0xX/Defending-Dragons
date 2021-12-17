@@ -6254,6 +6254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad14dbe3d0801940b576340bcf564c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialHealth: 10000
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8034,6 +8035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesPool: {fileID: 1818393938}
+  castle: {fileID: 417895816}
+  damageIntervals: 1
 --- !u!1 &1711074864
 GameObject:
   m_ObjectHideFlags: 0
