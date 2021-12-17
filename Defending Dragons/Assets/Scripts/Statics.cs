@@ -14,8 +14,6 @@ public class Statics
 
     public static readonly float EnemySpeed = 0.7f;
 
-    public static readonly int CastleHealth = 10000;
-
     public static readonly int MaxEnemyDamage = 125;
     public static readonly int MinEnemyDamage = 50;
 

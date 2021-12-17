@@ -121,9 +121,15 @@ public class Enemy : MonoBehaviour
         EnemyMoveDirection = EnemyMoveDirection.Default;
 
         _motionManager.Moving = false;
+        
+        // Stop attacking the castle
+        CancelInvoke(nameof(Attack));
     }
 
 
+    /// <summary>
+    /// The function that prepares the enemy for damaging the castle
+    /// </summary>
     private void PrepareForAttacking()
     {
         // Getting the castle object from the parent
@@ -132,6 +138,10 @@ public class Enemy : MonoBehaviour
         InvokeRepeating(nameof(Attack), 0f, _enemiesManager.DamageIntervals);
     }
 
+    /// <summary>
+    /// Determines a random damage value and reduce the health of the castle;
+    /// along with creating the right damage popup.
+    /// </summary>
     private void Attack()
     {
 

@@ -38,14 +38,18 @@ public class CannonShooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonUp("Fire1") && _playerInRange)
+        if (Input.GetButtonUp("Fire1") && _playerInRange)   // Player can only shoot the cannon when she is near it
         {
             Shoot();
         }
     }
 
+    /// <summary>
+    /// Spawns a cannonball and aims it to the target position
+    /// </summary>
     private void Shoot()
     {
+        // Determine the spawn position of the cannonball
         Vector3 position = transform.position;
         if (isRight)
         {
@@ -62,6 +66,13 @@ public class CannonShooting : MonoBehaviour
         _cannonballsManager.SpawnACannonball(EnemyColor.Red, position, new Vector2(force * forceFactor, 0));
     }
 
+    /// <summary>
+    /// Calculates the amount of needed force based on the movement equation of the cannonball
+    /// </summary>
+    /// <param name="mass"> mass of the cannonball</param>
+    /// <param name="gravity"> the gravity that is being applied to the cannonball</param>
+    /// <param name="spawnPosition"> starting position of the cannonball</param>
+    /// <returns></returns>
     private float ForceCalculator(float mass, float gravity, Vector3 spawnPosition)
     {
         float t2 = 2 * (spawnPosition.y / gravity);

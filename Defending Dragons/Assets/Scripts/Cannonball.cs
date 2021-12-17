@@ -67,7 +67,7 @@ public class Cannonball : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.CompareTag("Ground"))
+        if (collider.gameObject.CompareTag("Ground")) // Upon hitting the ground start the explosion sequence
         {
             Debug.Log("The cannonball " + gameObject.name + " has collided with the ground.");
             Explode();

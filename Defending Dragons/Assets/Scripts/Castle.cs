@@ -13,6 +13,10 @@ public class Castle : MonoBehaviour
         _health = initialHealth;
     }
 
+    /// <summary>
+    /// It is supposed to be called by enemies when they are damaging the castle.
+    /// </summary>
+    /// <param name="damageAmount"> How much health is going to be reduced. </param>
     public void Damage(int damageAmount)
     {
         _health -= damageAmount;
