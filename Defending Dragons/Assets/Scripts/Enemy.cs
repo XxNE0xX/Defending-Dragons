@@ -135,7 +135,7 @@ public class Enemy : MonoBehaviour
         // Getting the castle object from the parent
         _castle = _enemiesManager.Castle;
         // Start damaging the castle
-        InvokeRepeating(nameof(Attack), 0f, _enemiesManager.DamageIntervals);
+        InvokeRepeating(nameof(Attack), 0.2f, _enemiesManager.DamageIntervals);
     }
 
     /// <summary>

@@ -17,18 +17,18 @@ public class Statics
     public static readonly int MaxEnemyDamage = 125;
     public static readonly int MinEnemyDamage = 50;
 
-    public static readonly float DisappearTimerMax = 1.5f;
+    public static readonly float DisappearTimerMax = 1.0f;
     
     // Minimum and maximum for the red color of the damage popup text
     public static readonly int MaxDamagePopupGreen = 230;
     public static readonly int MinDamagePopupGreen = 120;
     
     // Enemy Colors
-    public static readonly Color32 Blue = new Color32(0, 204, 255, 255);
-    public static readonly Color32 Red = new Color32(255, 76, 81, 255);
-    public static readonly Color32 Yellow = Color.yellow;
-    public static readonly Color32 Green = new Color32(102, 255, 76, 255);
-    public static readonly Color32 Purple = new Color32(255, 0, 255, 255);
+    public static readonly Color32 Blue = new Color32(9, 123, 228, 255);
+    public static readonly Color32 Red = new Color32(225, 50, 33, 255);
+    public static readonly Color32 Yellow = new Color32(243, 220, 52, 255);
+    public static readonly Color32 Green = new Color32(28, 200, 15, 255);
+    public static readonly Color32 Purple = new Color32(116, 32, 187, 255);
     public static readonly Color32 Orange = new Color32(255, 116, 0, 255);
     public static readonly Color32 Black = new Color32(130, 130, 130, 255);
     public static readonly Color32 DefaultColor = new Color32(255, 255, 255, 255);

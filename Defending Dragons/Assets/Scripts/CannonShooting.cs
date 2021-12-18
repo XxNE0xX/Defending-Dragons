@@ -77,7 +77,6 @@ public class CannonShooting : MonoBehaviour
     {
         float t2 = 2 * (spawnPosition.y / gravity);
         float force = mass * (target.position.x - spawnPosition.x) / t2;
-        print("t: " + Mathf.Sqrt(t2));
         return force;
     }
 }

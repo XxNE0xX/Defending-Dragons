@@ -8,37 +8,21 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private EnemiesManager enemiesManager;
     [SerializeField] private CannonballsManager cannonballsManager;
-    private List<Enemy> _enemiesList;
     
 
-    private void Awake()
-    {
-        _enemiesList = new List<Enemy>();
-    }
-
-    void Start()
+    private void Start()
     {
 
-        _enemiesList.Add(enemiesManager.SpawnAnEnemy(EnemyColor.Red, EnemyMoveDirection.MarchLeft));
-        _enemiesList.Add(enemiesManager.SpawnAnEnemy(EnemyColor.Blue, EnemyMoveDirection.MarchRight));
+        StartCoroutine(SpawnTempFunction(1, 0, EnemyColor.Green, EnemyMoveDirection.MarchLeft));
+        StartCoroutine(SpawnTempFunction(4, 0, EnemyColor.Red, EnemyMoveDirection.MarchRight));
 
-        // cannonballsManager.SpawnACannonball(EnemyColor.Default, new Vector3(6, 3, 0));
-        
-        // StartCoroutine(DespawnTempFunction(10, 0));
-        // StartCoroutine(DespawnTempFunction(12, 1));
-
-    }
-
-    
-    void Update()
-    {
-        
     }
     
-    IEnumerator DespawnTempFunction(float time, int index)
+    
+    IEnumerator SpawnTempFunction(float time, int index, EnemyColor color, EnemyMoveDirection direction)
     {
         yield return new WaitForSeconds(time);
  
-        enemiesManager.DespawnAnEnemy(_enemiesList[index]);
+        enemiesManager.SpawnAnEnemy(color, direction);
     }
 }

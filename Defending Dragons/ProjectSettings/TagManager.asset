@@ -55,6 +55,9 @@ TagManager:
   - name: Character
     uniqueID: 1708580821
     locked: 0
+  - name: Dragon
+    uniqueID: 3392243031
+    locked: 0
   - name: Top
     uniqueID: 44261843
     locked: 0

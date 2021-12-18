@@ -97,14 +97,14 @@ public class CannonballsManager : MonoBehaviour
             _activeCannonballs.Remove(cannonball);
             _idleCannonballs.Add(cannonball.gameObject);
 
-            Debug.Log("The cannonball with transform InstanceID: " + cannonball.transform.GetInstanceID() + 
-                      " despawned.");
+            // Debug.Log("The cannonball with transform InstanceID: " + cannonball.transform.GetInstanceID() + 
+            //           " despawned.");
         }
         // Logging error if something tries to despawn an cannonball twice
         else
         {
-            Debug.LogError("The cannonball with transform InstanceID: " + cannonball.transform.GetInstanceID() + 
-                           " has already been despawned.");
+            // Debug.LogError("The cannonball with transform InstanceID: " + cannonball.transform.GetInstanceID() + 
+            //                " has already been despawned.");
         }
     }
 }
