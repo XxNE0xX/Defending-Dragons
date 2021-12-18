@@ -69,7 +69,7 @@ public class Cannonball : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.CompareTag("Ground")) // Upon hitting the ground start the explosion sequence
         {
-            Debug.Log("The cannonball " + gameObject.name + " has collided with the ground.");
+            // Debug.Log("The cannonball " + gameObject.name + " has collided with the ground.");
             Explode();
             Despawn();
         }
@@ -88,7 +88,7 @@ public class Cannonball : MonoBehaviour
         // _groundTiles.SetTileFlags(explosionTilePos, TileFlags.None);
         // _groundTiles.SetColor(explosionTilePos, Color.red);
         Vector3 explosionCenterPosition = _groundTiles.CellToWorld(explosionTilePos);
-        Debug.Log("tile pos: " + explosionCenterPosition);
+        // Debug.Log("tile pos: " + explosionCenterPosition);
         explosionCenterPosition = new Vector3(explosionCenterPosition.x + Statics.GROUND_TILES_SIZE / 2, 0, 0);
         _enemiesManager.ExplosionOnPosition(explosionCenterPosition, 
             Statics.GROUND_TILES_SIZE / 2 + Statics.THRESHOLD_MARGIN_FOR_EXPLOSION, _enemyColor);

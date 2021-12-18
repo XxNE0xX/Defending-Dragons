@@ -15,11 +15,6 @@ public class Boundary : MonoBehaviour
         SetEdgeX();
     }
 
-    private void Update()
-    {
-        
-    }
-
     /// <summary>
     /// Finds screen's width and height in world reference
     /// </summary>

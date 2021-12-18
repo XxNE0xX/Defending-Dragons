@@ -18,7 +18,7 @@ public class EnemyDetectionManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.CompareTag("Castle"))
         {
-            Debug.Log("The enemy " + gameObject.name + " has collided with the castle.");
+            // Debug.Log("The enemy " + gameObject.name + " has collided with the castle.");
             InformOtherComponents();
         }
         

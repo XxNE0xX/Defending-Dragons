@@ -92,14 +92,14 @@ public class EnemiesManager : MonoBehaviour
             // Finalizing the process by calling the local despawn
             enemy.Despawn();
             
-            Debug.Log("The enemy with transform InstanceID: " + enemy.transform.GetInstanceID() + 
-                           " despawned.");
+            // Debug.Log("The enemy with transform InstanceID: " + enemy.transform.GetInstanceID() + 
+            //                " despawned.");
         }
         // Logging error if something tries to despawn an enemy twice
         else
         {
-            Debug.LogError("The enemy with transform InstanceID: " + enemy.transform.GetInstanceID() + 
-                           " has already been despawned.");
+            // Debug.LogError("The enemy with transform InstanceID: " + enemy.transform.GetInstanceID() + 
+            //                " has already been despawned.");
         }
     }
 
@@ -120,7 +120,8 @@ public class EnemiesManager : MonoBehaviour
             }
             else    // Enemy Survives
             {
-                Debug.Log("The " + color + " cannonball can't kill a " + possibleKilledEnemy.EnemyColor + " enemy!");
+                // Show some form of immunity effect
+                // Debug.Log("The " + color + " cannonball can't kill a " + possibleKilledEnemy.EnemyColor + " enemy!");
             }
         }
     }
