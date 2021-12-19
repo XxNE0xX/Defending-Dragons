@@ -352,16 +352,16 @@ TextureImporter:
     second: Cannon
   - first:
       213: -1839621896695362423
-    second: Castle_116
+    second: Ladder_00
   - first:
       213: -682407721248767627
-    second: Castle_117
+    second: Ladder_01
   - first:
       213: -1313182436061929730
-    second: Castle_118
+    second: Ladder_10
   - first:
       213: -5624741331906085784
-    second: Castle_119
+    second: Ladder_11
   - first:
       213: -2798998869845909162
     second: Castle_120
@@ -2918,6 +2918,90 @@ TextureImporter:
       bones: []
       spriteID: 45a2a4172be9e9090800000000000000
       internalID: -8025802996685591980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ladder_00
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c4176b1a95876e0800000000000000
+      internalID: -1839621896695362423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ladder_01
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571cbf60bc99786f0800000000000000
+      internalID: -682407721248767627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ladder_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe1f3d2883a6cde0800000000000000
+      internalID: -1313182436061929730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ladder_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cb74e4f87e0f1b0800000000000000
+      internalID: -5624741331906085784
       vertices: []
       indices: 
       edges: []

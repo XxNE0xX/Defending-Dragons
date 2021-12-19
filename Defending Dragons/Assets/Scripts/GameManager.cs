@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 
-        StartCoroutine(SpawnTempFunction(1, 0, EnemyColor.Green, EnemyMoveDirection.MarchLeft));
-        StartCoroutine(SpawnTempFunction(4, 0, EnemyColor.Red, EnemyMoveDirection.MarchRight));
+        // StartCoroutine(SpawnTempFunction(1, 0, EnemyColor.Green, EnemyMoveDirection.MarchLeft));
+        // StartCoroutine(SpawnTempFunction(4, 0, EnemyColor.Red, EnemyMoveDirection.MarchRight));
 
     }
     
