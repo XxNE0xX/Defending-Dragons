@@ -27,7 +27,9 @@ public class CharacterController2D : MonoBehaviour
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
-	
+
+	public bool FacingRight => m_FacingRight;
+
 
 	private void Awake()
 	{

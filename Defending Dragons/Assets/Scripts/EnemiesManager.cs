@@ -37,7 +37,7 @@ public class EnemiesManager : MonoBehaviour
     /// <returns> The enemy object that has been setup and is ready.</returns>
     public Enemy SpawnAnEnemy(EnemyColor enemyColor, EnemyMoveDirection enemyMoveDirection)
     {
-        // Debug.Log("SpawnAnEnemy in EnemiesManager!");
+        // Debug.Log("SpawnAFood in EnemiesManager!");
         Enemy chosenEnemy;
         
         // Choose an enemy from the idle enemies stack

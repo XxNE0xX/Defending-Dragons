@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonShooting : MonoBehaviour
+public class Cannon : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float cannonWidth = 0.5f;
@@ -13,41 +13,16 @@ public class CannonShooting : MonoBehaviour
     [SerializeField] private bool isRight;
 
     private CannonballsManager _cannonballsManager;
-    private bool _playerInRange = false;
 
     private void Awake()
     {
         _cannonballsManager = GetComponentInParent<CannonsParent>().cannonballsManager;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _playerInRange = true;
-        }
-    }
-    
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _playerInRange = false;
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonUp("Fire1") && _playerInRange)   // Player can only shoot the cannon when she is near it
-        {
-            Shoot();
-        }
-    }
-
     /// <summary>
     /// Spawns a cannonball and aims it to the target position
     /// </summary>
-    private void Shoot()
+    public void Shoot()
     {
         // Determine the spawn position of the cannonball
         Vector3 position = transform.position;

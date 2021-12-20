@@ -10,7 +10,7 @@ using UnityEngine.Tilemaps;
 /// upon being despawned, it calls the manager and removes itself from the list
 /// while resetting its properties. 
 /// </summary>
-public class Cannonball : MonoBehaviour
+public class Cannonball : HandyObject
 {
     
     private Tilemap _groundTiles;
@@ -18,7 +18,6 @@ public class Cannonball : MonoBehaviour
     private CannonballsManager _cannonballsManager;
 
     private SpriteRenderer _spriteRenderer;
-    private Rigidbody2D _rb;
     
     private EnemyColor _enemyColor;
 
@@ -59,6 +58,8 @@ public class Cannonball : MonoBehaviour
             };
         }
     }
+    
+    public int Power { get; set; }
 
     private void Awake()
     {
@@ -101,6 +102,7 @@ public class Cannonball : MonoBehaviour
     public void Spawn(Vector3 position, float gravity, float mass, Vector2 initialForce)
     {
         transform.position = position;
+        _defaultGravity = gravity;
         _rb.gravityScale = gravity;
         _rb.mass = mass;
         _rb.AddForce(initialForce);

@@ -10,20 +10,24 @@ TagManager:
   - Castle
   - Ground
   - Ladder
+  - Cannon
+  - Food
+  - Cannonball
+  - FoodSource
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grass
   - Water
   - UI
   - Player
   - CastleObstacles
   - CastleLadders
-  - CastlePlatforms
-  - 
-  - 
-  - 
+  - LadderTop
+  - Food
+  - FoodEntrance
+  - FoodChildCollider
   - 
   - 
   - 

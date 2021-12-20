@@ -23,7 +23,7 @@ public abstract class PoolGenerator
         {
             GameObject obj = Object.Instantiate(prefab, 
                 new Vector3(Statics.DefaultPoolPositionX, Statics.PoolVerticalOffset, 0), Quaternion.identity);
-            obj.name = objectName + i;
+            obj.name = objectName + "_" + i;
             obj.transform.SetParent(objectsPool.transform);
             if (obj.GetComponent<Rigidbody2D>() != null)
             {

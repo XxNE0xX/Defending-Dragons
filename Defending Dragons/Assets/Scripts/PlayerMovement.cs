@@ -11,19 +11,38 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sprintValueMultiplier = 1.75f;
     [SerializeField] private float defaultGravity = 3f;
     [SerializeField] private float gravityOnLadder = 2f;
+    [SerializeField] private float itemsAboveHeadOffset = 0.5f;
     
     private Rigidbody2D _rb;
     
-    private float _horizontalMove = 0f;
-    private float _verticalMove = 0f;
+    private float _horizontalMove;
+    private float _verticalMove;
 
-    private bool _onLadder = false;
+    private bool _onLadder;
+    private bool _jump;
     private float _speedModifier = 1f;
+
+    private bool _isHandEmpty;
+    private Transform _objectInHand;
+    
+    private bool _nearCannon;
+    private Cannon _closeCannon;
+    private bool _nearFoodSource;
+    private FoodsManager _foodSource;
+    private bool _nearFood;
+    private Food _closeFood;
+    private bool _foodPicked;
+    private Cannonball _closeCannonball;
+    private bool _cannonballPicked;
+
+    private float _dropForceX = 20f;
+    private float _dropForceY = 20f;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = defaultGravity;
+        _isHandEmpty = true;
     }
 
     private void Update()
@@ -31,10 +50,39 @@ public class PlayerMovement : MonoBehaviour
         _horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed * _speedModifier;
         _verticalMove = Input.GetAxisRaw("Ascend") * moveSpeed * Convert.ToInt32(_onLadder);
 
+        // Picking food, only the player's not already having an item in her hands
+        if (Input.GetButtonDown("Fire2") && _nearFood && _isHandEmpty)
+        {
+            PickHandyObject(_closeFood);
+        }
+        // Dropping food
+        else if (Input.GetButtonDown("Fire2") && _foodPicked)
+        {
+            DropHandyObject(_closeFood);
+        }
+        // Taking a food from the stash, only the player's not already having an item in her hands
+        else if (Input.GetButtonDown("Fire2") && _nearFoodSource && _isHandEmpty)
+        {
+            GrabFood();
+        }
+
+        if (Input.GetButtonUp("Fire1") && _nearCannon) // Player can only shoot the cannon when she is near it
+        {
+            ShootCannon();
+        }
+
+        // Jump
+        if (Input.GetButtonDown("Jump") && !_onLadder && !_nearCannon)
+        {
+            _jump = true;
+        }
+        
+        // Checking for sprinting
         if (Input.GetButtonDown("Sprint"))
         {
             _speedModifier = sprintValueMultiplier;
         }
+        // Stop sprinting
         else if (Input.GetButtonUp("Sprint")){
             _speedModifier = 1f;
         }
@@ -42,7 +90,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        controller.Move(_horizontalMove, _verticalMove, false);
+        controller.Move(_horizontalMove, _verticalMove, _jump);
+        _jump = false;
+        
+        // Move the object in hand as well
+        if (_objectInHand != null)
+        {
+            _objectInHand.position = transform.position + Vector3.up * itemsAboveHeadOffset;
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,18 +106,127 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ladder"))
         {
             _onLadder = true;
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("CastlePlatforms"));
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("LadderTop"));
             _rb.gravityScale = gravityOnLadder;
         }
+        
+        if (other.gameObject.CompareTag("Cannon"))
+        {
+            _nearCannon = true;
+            _closeCannon = other.gameObject.GetComponent<Cannon>();
+        }
+
+        if (other.gameObject.CompareTag("Food"))
+        {
+            _nearFood = true;
+            _closeFood = other.gameObject.GetComponent<Food>();
+        }
+
+        if (other.gameObject.CompareTag("FoodSource"))
+        {
+            _nearFoodSource = true;
+            _foodSource = other.gameObject.GetComponent<FoodsManager>();
+        }
+        
     }
-    
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            _nearFood = true;
+            _closeFood = other.gameObject.GetComponent<Food>();
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Ladder"))
         {
             _onLadder = false;
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("CastlePlatforms"), _onLadder);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("LadderTop"), _onLadder);
             _rb.gravityScale = defaultGravity;
         }
+        
+        if (other.gameObject.CompareTag("Cannon"))
+        {
+            _nearCannon = false;
+            _closeCannon = null;
+        }
+        
+        if (other.gameObject.CompareTag("Food"))
+        {
+            _nearFood = false;
+            _closeFood = null;
+        }
+        
+        if (other.gameObject.CompareTag("FoodSource"))
+        {
+            _nearFoodSource = false;
+            _foodSource = null;
+        }
+    }
+
+    private void PickHandyObject(HandyObject obj)
+    {
+        obj.PickUp();
+        SpriteRenderer objSR = obj.GetComponent<SpriteRenderer>();
+        objSR.sortingLayerName = "Character";
+        objSR.sortingOrder = 1;
+        if (obj.GetType() == typeof(Food))
+        {
+            _foodPicked = true;
+        }
+        else if (obj.GetType() == typeof(Cannonball))
+        {
+            _cannonballPicked = true;
+        }
+        _objectInHand = obj.transform;
+        _isHandEmpty = false;
+    }
+
+    private void DropHandyObject(HandyObject obj)
+    {
+        // add some force when dropping the object corresponding to the player's direction
+        bool facingRight = GetComponent<CharacterController2D>().FacingRight;
+        Vector3 force = facingRight ? new Vector3(_dropForceX, _dropForceY, 0) : new Vector3(-_dropForceX, _dropForceY, 0);
+        obj.Drop(force);
+        
+        // resetting the sorting layer of the food
+        SpriteRenderer objSR = obj.GetComponent<SpriteRenderer>();
+        if (obj.GetType() == typeof(Food))
+        {
+            objSR.sortingLayerName = "Castle";
+            objSR.sortingOrder = 12;
+            _foodPicked = false;
+        }
+        else if (obj.GetType() == typeof(Cannonball))
+        {
+            objSR.sortingLayerName = "Castle";
+            objSR.sortingOrder = 13;
+            _cannonballPicked = false;
+        }
+        
+        _objectInHand = null;
+        _isHandEmpty = true;
+    }
+
+
+    private void GrabFood()
+    {
+        _closeFood = _foodSource.SpawnAFood();
+        if (_closeFood != null)
+        {
+            PickHandyObject(_closeFood);
+        }
+        else
+        {
+            Debug.Log("You can only have so many foods at a time!");
+        }
+    }
+
+    private void ShootCannon()
+    {
+        _closeCannon.Shoot();
     }
 }
