@@ -23,6 +23,7 @@ public class GameAssets : MonoBehaviour
     public Cannonball pfCannonball;
     public DamagePopup pfDamagePopup;
     public Food pfFoodTrigger;
+    public Dragon pfDragon;
 }
 
 

@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _nearFood;
     private Food _closeFood;
     private bool _foodPicked;
+    private bool _nearCannonball;
     private Cannonball _closeCannonball;
     private bool _cannonballPicked;
 
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         // Dropping food
         else if (Input.GetButtonDown("Fire2") && _foodPicked)
         {
-            DropHandyObject(_closeFood);
+            DropHandyObject();
         }
         // Taking a food from the stash, only the player's not already having an item in her hands
         else if (Input.GetButtonDown("Fire2") && _nearFoodSource && _isHandEmpty)
@@ -66,9 +67,29 @@ public class PlayerMovement : MonoBehaviour
             GrabFood();
         }
 
-        if (Input.GetButtonUp("Fire1") && _nearCannon) // Player can only shoot the cannon when she is near it
+        if (Input.GetButtonDown("Fire2") && _nearCannonball && _isHandEmpty)
         {
-            ShootCannon();
+            PickHandyObject(_closeCannonball);
+            _closeCannonball.PickedUpByPlayer();
+        }
+        // Loading cannonball to the cannon
+        else if (Input.GetButtonDown("Fire2") && _cannonballPicked && _nearCannon && !_closeCannon.Loaded)
+        {
+            _closeCannon.Load(_objectInHand.GetComponent<Cannonball>());
+            _objectInHand = null;
+            _isHandEmpty = true;
+            _cannonballPicked = false;
+        }
+        // Dropping cannonball
+        else if (Input.GetButtonDown("Fire2") && _cannonballPicked)
+        {
+            Cannonball cannonball = _objectInHand.GetComponent<Cannonball>();
+            DropHandyObject();
+            cannonball.DroppedByPlayer();
+        }
+        else if (Input.GetButtonUp("Fire1") && _nearCannon) // Player can only shoot the cannon when she is near it
+        {
+            _closeCannon.Shoot();
         }
 
         // Jump
@@ -94,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
         _jump = false;
         
         // Move the object in hand as well
-        if (_objectInHand != null)
+        if (!_isHandEmpty)
         {
             _objectInHand.position = transform.position + Vector3.up * itemsAboveHeadOffset;
         }
@@ -121,6 +142,12 @@ public class PlayerMovement : MonoBehaviour
             _nearFood = true;
             _closeFood = other.gameObject.GetComponent<Food>();
         }
+        
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _nearCannonball = true;
+            _closeCannonball = other.gameObject.GetComponent<Cannonball>();
+        }
 
         if (other.gameObject.CompareTag("FoodSource"))
         {
@@ -136,6 +163,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _nearFood = true;
             _closeFood = other.gameObject.GetComponent<Food>();
+        }
+        
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _nearCannonball = true;
+            _closeCannonball = other.gameObject.GetComponent<Cannonball>();
         }
     }
 
@@ -158,6 +191,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _nearFood = false;
             _closeFood = null;
+        }
+        
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _nearCannonball = false;
+            _closeCannonball = null;
         }
         
         if (other.gameObject.CompareTag("FoodSource"))
@@ -185,25 +224,26 @@ public class PlayerMovement : MonoBehaviour
         _isHandEmpty = false;
     }
 
-    private void DropHandyObject(HandyObject obj)
+    private void DropHandyObject()
     {
+        HandyObject ho = _objectInHand.GetComponent<HandyObject>();
         // add some force when dropping the object corresponding to the player's direction
         bool facingRight = GetComponent<CharacterController2D>().FacingRight;
         Vector3 force = facingRight ? new Vector3(_dropForceX, _dropForceY, 0) : new Vector3(-_dropForceX, _dropForceY, 0);
-        obj.Drop(force);
+        ho.Drop(force);
         
         // resetting the sorting layer of the food
-        SpriteRenderer objSR = obj.GetComponent<SpriteRenderer>();
-        if (obj.GetType() == typeof(Food))
+        SpriteRenderer objSR = ho.GetComponent<SpriteRenderer>();
+        if (ho.GetType() == typeof(Food))
         {
             objSR.sortingLayerName = "Castle";
             objSR.sortingOrder = 12;
             _foodPicked = false;
         }
-        else if (obj.GetType() == typeof(Cannonball))
+        else if (ho.GetType() == typeof(Cannonball))
         {
             objSR.sortingLayerName = "Castle";
-            objSR.sortingOrder = 13;
+            objSR.sortingOrder = 17;
             _cannonballPicked = false;
         }
         
@@ -223,10 +263,5 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("You can only have so many foods at a time!");
         }
-    }
-
-    private void ShootCannon()
-    {
-        _closeCannon.Shoot();
     }
 }

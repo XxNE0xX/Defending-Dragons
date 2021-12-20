@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -15,13 +16,15 @@ public class CannonballsManager : MonoBehaviour
     [SerializeField] private float cannonballsGravity = 2f; 
     [SerializeField] private float cannonballWidth = 0.3125f;
     [SerializeField] private float cannonballWeight = 0.5f;
-    
+
     private List<GameObject> _idleCannonballs;
     private List<Cannonball> _activeCannonballs;
 
     public float CannonballsGravity => cannonballsGravity;
     public float CannonballWidth => cannonballWidth;
     public float CannonballWeight => cannonballWeight;
+
+    private bool _cannonballTooClose;
 
     private void Awake()
     {
@@ -31,6 +34,43 @@ public class CannonballsManager : MonoBehaviour
         GeneratePoolObjects(baseCannonballsCountInPool);
         _activeCannonballs = new List<Cannonball>();
     }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire3") && !_cannonballTooClose)
+        {
+            SpawnACannonball(EnemyColor.Default, transform.position);
+        }
+        else if (Input.GetButtonDown("Fire3") && _cannonballTooClose)
+        {
+            Debug.Log("Other cannonball is too close! Rotate the platform...");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _cannonballTooClose = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _cannonballTooClose = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _cannonballTooClose = false;
+        }
+    }
+
 
     /// <summary>
     /// Generates some entities to be added to the pool.
@@ -55,7 +95,7 @@ public class CannonballsManager : MonoBehaviour
     /// Spawns a single enemy
     /// </summary>
     /// <returns> The cannonball object that has been setup and is ready.</returns>
-    public Cannonball SpawnACannonball(EnemyColor color, Vector3 position, Vector2 initialForce)
+    public Cannonball SpawnACannonball(EnemyColor color, Vector3 position)
     {
         Cannonball chosenCannonball;
         
@@ -76,7 +116,7 @@ public class CannonballsManager : MonoBehaviour
         }
 
         chosenCannonball.EnemyColor = color;
-        chosenCannonball.Spawn(position, cannonballsGravity, cannonballWeight, initialForce);
+        chosenCannonball.Spawn(position, cannonballsGravity, cannonballWeight);
         
         // Adding the chosen cannonball to the list of the active cannonballs
         _activeCannonballs.Add(chosenCannonball);
@@ -93,6 +133,7 @@ public class CannonballsManager : MonoBehaviour
         // We need to despawn the cannonball only if it is active
         if (_activeCannonballs.Contains(cannonball))
         {
+
             // Removing the cannonball from the active stack and piling it up on the idle stack
             _activeCannonballs.Remove(cannonball);
             _idleCannonballs.Add(cannonball.gameObject);

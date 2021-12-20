@@ -14,6 +14,11 @@ public class Cannon : MonoBehaviour
 
     private CannonballsManager _cannonballsManager;
 
+    private Cannonball _currentCannonball;
+    private bool _loaded;
+
+    public bool Loaded => _loaded;
+
     private void Awake()
     {
         _cannonballsManager = GetComponentInParent<CannonsParent>().cannonballsManager;
@@ -24,21 +29,45 @@ public class Cannon : MonoBehaviour
     /// </summary>
     public void Shoot()
     {
-        // Determine the spawn position of the cannonball
-        Vector3 position = transform.position;
-        if (isRight)
+        if (_loaded)
         {
-            position.x += cannonWidth + _cannonballsManager.CannonballWidth;
+            // Determine the spawn position of the cannonball
+            Vector3 position = transform.position;
+            if (isRight)
+            {
+                position.x += cannonWidth + _cannonballsManager.CannonballWidth;
+            }
+            else
+            {
+                position.x -= cannonWidth + _cannonballsManager.CannonballWidth;
+            }
+
+            position.y += cannonHeight / 2;
+            float force = ForceCalculator(_cannonballsManager.CannonballWeight, _cannonballsManager.CannonballsGravity,
+                position);
+            _currentCannonball.Shoot(position, new Vector2(force * forceFactor, 0));
+
+            _loaded = false;
+            _currentCannonball = null;
         }
         else
         {
-            position.x -= cannonWidth + _cannonballsManager.CannonballWidth;
+            Debug.Log("Cannon is not loaded!");
         }
+    }
 
-        position.y += cannonHeight / 2;
-        float force = ForceCalculator(_cannonballsManager.CannonballWeight, _cannonballsManager.CannonballsGravity,
-            position);
-        _cannonballsManager.SpawnACannonball(EnemyColor.Red, position, new Vector2(force * forceFactor, 0));
+    public void Load(Cannonball cannonball)
+    {
+        if (!_loaded)
+        {
+            _currentCannonball = cannonball;
+            _loaded = true;
+            _currentCannonball.Loaded();
+        }
+        else
+        {
+            Debug.Log("The cannon is already loaded.");
+        }
     }
 
     /// <summary>

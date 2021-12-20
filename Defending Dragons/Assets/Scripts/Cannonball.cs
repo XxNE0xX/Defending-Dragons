@@ -94,18 +94,56 @@ public class Cannonball : HandyObject
         _enemiesManager.ExplosionOnPosition(explosionCenterPosition, 
             Statics.GROUND_TILES_SIZE / 2 + Statics.THRESHOLD_MARGIN_FOR_EXPLOSION, _enemyColor);
     }
+
+    private void OnPlatform()
+    {
+        _rb.gravityScale = 0f;
+        _rb.velocity = Vector2.zero;
+    }
+
+    public void PickedUpByPlayer()
+    {
+        _rb.gravityScale = 0f;
+        RouteFollowCannonball rfCannonball = GetComponent<RouteFollowCannonball>();
+        // Disabling the component after the cannonball is picked. 
+        rfCannonball.enabled = false;
+    }
+    
+    public void DroppedByPlayer()
+    {
+        _rb.gravityScale = _defaultGravity;
+    }
+
+    public void Loaded()
+    {
+        _rb.gravityScale = 0f;
+        _rb.velocity = Vector3.zero;
+        transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.PoolVerticalOffset, 0);
+    }
+
+    public void Shoot(Vector3 position, Vector2 force)
+    {
+        transform.position = position;
+        _rb.gravityScale = _defaultGravity;
+        _rb.AddForce(force);
+    }
     
     /// <summary>
     /// Setting the position of the object to the given position.
     /// Setting the gravity value to non zero.
     /// </summary>
-    public void Spawn(Vector3 position, float gravity, float mass, Vector2 initialForce)
+    public void Spawn(Vector3 position, float gravity, float mass)
     {
         transform.position = position;
         _defaultGravity = gravity;
-        _rb.gravityScale = gravity;
+        _rb.gravityScale = _defaultGravity;
         _rb.mass = mass;
-        _rb.AddForce(initialForce);
+        
+        OnPlatform();
+        RouteFollowCannonball rfCannonball = GetComponent<RouteFollowCannonball>();
+        // By default, this component is disabled.
+        rfCannonball.enabled = true;
+        rfCannonball.SetInitialTFactor(0);
     }
 
     /// <summary>

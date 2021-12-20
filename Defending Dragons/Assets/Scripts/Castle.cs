@@ -8,9 +8,20 @@ public class Castle : MonoBehaviour
     [SerializeField] private int initialHealth = 10000;
     private int _health;
 
+    private bool _gameOverPopup;
+
     private void Awake()
     {
         _health = initialHealth;
+    }
+
+    private void Update()
+    {
+        if (_health < 0 && !_gameOverPopup)
+        {
+            Debug.Log("Game Over");
+            _gameOverPopup = true;
+        }
     }
 
     /// <summary>

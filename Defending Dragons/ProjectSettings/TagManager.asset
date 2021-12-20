@@ -28,8 +28,8 @@ TagManager:
   - Food
   - FoodEntrance
   - FoodChildCollider
-  - 
-  - 
+  - Cannonball
+  - CannonballChildCollider
   - 
   - 
   - 
