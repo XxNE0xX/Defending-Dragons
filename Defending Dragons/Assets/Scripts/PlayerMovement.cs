@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetButtonDown("Jump") && !_onLadder && !_nearCannon)
+        if (Input.GetButtonDown("Jump") && !_nearCannon)
         {
             _jump = true;
         }

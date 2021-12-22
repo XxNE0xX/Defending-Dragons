@@ -441,6 +441,7 @@ MonoBehaviour:
   forceFactor: 2
   isRight: 0
   readyText: {fileID: 6583849614486540804}
+  _reloadTextAnimation: {fileID: 5568944321717378087}
 --- !u!1 &9173093140465164147
 GameObject:
   m_ObjectHideFlags: 0

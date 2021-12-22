@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Dragon : MonoBehaviour
@@ -12,6 +13,9 @@ public class Dragon : MonoBehaviour
     private Food _closeFood;
     private bool _nearCannonball;
     private Cannonball _closeCannonball;
+    
+    [SerializeField] private GameObject blowText;
+    [SerializeField] private GameObject eatText;
 
     public EnemyColor Color
     {
@@ -114,11 +118,14 @@ public class Dragon : MonoBehaviour
         if (other.gameObject.CompareTag("Cannonball"))
         {
             _nearCannonball = true;
+            blowText.SetActive(true);
+            blowText.GetComponent<TextMeshPro>().color = Statics.GetColorFromEnemyColor(_color);
             _closeCannonball = other.gameObject.GetComponent<Cannonball>();
         }
         if (other.gameObject.CompareTag("Food"))
         {
             _nearFood = true;
+            eatText.SetActive(true);
             _closeFood = other.gameObject.GetComponent<Food>();
         }
     }
@@ -128,11 +135,13 @@ public class Dragon : MonoBehaviour
         if (other.gameObject.CompareTag("Cannonball"))
         {
             _nearCannonball = false;
+            blowText.SetActive(false);
             _closeCannonball = null;
         }
         else if (other.gameObject.CompareTag("Food"))
         {
             _nearFood = false;
+            eatText.SetActive(false);
             _closeFood = null;
         }
     }

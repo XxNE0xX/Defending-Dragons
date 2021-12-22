@@ -14,9 +14,9 @@ public class Cannon : MonoBehaviour
     [SerializeField] private bool isRight;
 
     [SerializeField] private TextMeshPro readyText;
+    [SerializeField] private CannonReloadTextAnimation _reloadTextAnimation;
 
     private CannonballsManager _cannonballsManager;
-    private CannonReloadTextAnimation _reloadTextAnimation;
     private CannonPathDrawer _cannonPathDrawer;
 
     private Cannonball _currentCannonball;
@@ -31,7 +31,6 @@ public class Cannon : MonoBehaviour
     private void Awake()
     {
         _cannonballsManager = GetComponentInParent<CannonsParent>().cannonballsManager;
-        _reloadTextAnimation = GetComponentInChildren<CannonReloadTextAnimation>(true);
         _cannonPathDrawer = GetComponentInChildren<CannonPathDrawer>(true);
         
         // Determine the spawn position of the cannonball

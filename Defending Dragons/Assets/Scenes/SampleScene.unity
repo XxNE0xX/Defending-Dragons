@@ -6684,7 +6684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09e537e892b2bf42871870771c01a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tParamStepsSize: 0.001
+  tParamStepsSize: 0.002
 --- !u!1 &183497644
 GameObject:
   m_ObjectHideFlags: 0
@@ -9787,7 +9787,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 695
+    m_Bits: 951
   m_GroundCheck: {fileID: 1416325032}
   m_CeilingCheck: {fileID: 1711074865}
   OnLandEvent:
