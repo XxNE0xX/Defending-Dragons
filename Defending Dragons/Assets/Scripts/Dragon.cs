@@ -42,7 +42,7 @@ public class Dragon : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2") && _nearCannonball)
         {
-            Breathe();
+            Blow();
         }
     }
 
@@ -53,7 +53,7 @@ public class Dragon : MonoBehaviour
         _strength++;
     }
 
-    private void Breathe()
+    private void Blow()
     {
         if (_strength > 0)
         {

@@ -13,7 +13,7 @@ public class CannonballsManager : MonoBehaviour
     [SerializeField] private EnemiesManager enemiesManager;
     [SerializeField] private int baseCannonballsCountInPool = 15;
     [SerializeField] private int addMoreCannonballsToPoolCount = 5;
-    [SerializeField] private float cannonballsGravity = 2f; 
+    [SerializeField] private float cannonballsGravity = 1.5f; 
     [SerializeField] private float cannonballWidth = 0.3125f;
     [SerializeField] private float cannonballWeight = 0.5f;
 

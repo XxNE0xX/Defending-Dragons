@@ -1032,11 +1032,19 @@ PrefabInstance:
       objectReference: {fileID: 1795899979}
     - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287706, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_Name
       value: Cannon4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042298787218287707, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287716, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_RootOrder
@@ -1044,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287716, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287716, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6676,7 +6684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09e537e892b2bf42871870771c01a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tParamStepsSize: 0.005
+  tParamStepsSize: 0.001
 --- !u!1 &183497644
 GameObject:
   m_ObjectHideFlags: 0
@@ -7354,11 +7362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -4.25
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287706, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_Name
@@ -9036,15 +9044,19 @@ PrefabInstance:
       objectReference: {fileID: 759837701}
     - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -4.25
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287706, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_Name
       value: Cannon3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042298787218287707, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287716, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_RootOrder
@@ -9052,7 +9064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287716, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287716, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9687,7 +9699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977055077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.37, y: 0.5, z: 0}
+  m_LocalPosition: {x: 3.79, y: 3.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1416325032}
@@ -11548,7 +11560,7 @@ MonoBehaviour:
   enemiesManager: {fileID: 1579440053}
   baseCannonballsCountInPool: 15
   addMoreCannonballsToPoolCount: 5
-  cannonballsGravity: 1.5
+  cannonballsGravity: 0.75
   cannonballWidth: 0.125
   cannonballWeight: 0.5
 --- !u!61 &1213112645
@@ -13868,7 +13880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ef002d206684646b5703df26bc52b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tParamStepsSize: 0.01
+  tParamStepsSize: 0.0075
 --- !u!1 &1711074864
 GameObject:
   m_ObjectHideFlags: 0
@@ -31636,7 +31648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042298786868521023, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 8042298787218287706, guid: 531bb3eecbb198f48a8cc91989db2424, type: 3}
       propertyPath: m_Name

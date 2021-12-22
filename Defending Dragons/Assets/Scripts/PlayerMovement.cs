@@ -159,6 +159,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Ladder"))
+        {
+            _onLadder = true;
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("LadderTop"));
+            _rb.gravityScale = gravityOnLadder;
+        }
+        
         if (other.gameObject.CompareTag("Food"))
         {
             _nearFood = true;

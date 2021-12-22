@@ -24,6 +24,7 @@ public class GameAssets : MonoBehaviour
     public DamagePopup pfDamagePopup;
     public Food pfFoodTrigger;
     public Dragon pfDragon;
+    public Transform pfPathCircle;
 }
 
 

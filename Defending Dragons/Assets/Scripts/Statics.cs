@@ -36,9 +36,28 @@ public class Statics
     // Tiles properties
     public const float GROUND_TILES_SIZE = 1f;
     public const float THRESHOLD_MARGIN_FOR_EXPLOSION = 0.1f;
+    
+    // Cannon properties
+    public const float RELOAD_TEXT_BLINKING_TIME = 0.8f;
 
     public static void LogWarningMethodNotImplemented(string name)
     {
         Debug.LogWarning("Method " + name + " Has Not Been Implemented!");
+    }
+
+    public static Color32 GetColorFromEnemyColor(EnemyColor enemyColor)
+    {
+        Color32 color = enemyColor switch
+        {
+            EnemyColor.Blue => Statics.Blue,
+            EnemyColor.Red => Statics.Red,
+            EnemyColor.Yellow => Statics.Yellow,
+            EnemyColor.Green => Statics.Green,
+            EnemyColor.Purple => Statics.Purple,
+            EnemyColor.Orange => Statics.Orange,
+            EnemyColor.Black => Statics.Black,
+            _ => Statics.DefaultColor
+        };
+        return color;
     }
 }

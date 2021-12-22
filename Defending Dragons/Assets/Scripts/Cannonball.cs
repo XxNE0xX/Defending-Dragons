@@ -45,17 +45,7 @@ public class Cannonball : HandyObject
         set
         {
             _enemyColor = value;
-            _spriteRenderer.color = _enemyColor switch
-            {
-                EnemyColor.Blue => Statics.Blue,
-                EnemyColor.Red => Statics.Red,
-                EnemyColor.Yellow => Statics.Yellow,
-                EnemyColor.Green => Statics.Green,
-                EnemyColor.Purple => Statics.Purple,
-                EnemyColor.Orange => Statics.Orange,
-                EnemyColor.Black => Statics.Black,
-                _ => Statics.DefaultColor
-            };
+            _spriteRenderer.color = Statics.GetColorFromEnemyColor(_enemyColor);
         }
     }
     
@@ -65,6 +55,10 @@ public class Cannonball : HandyObject
     {
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -121,11 +115,11 @@ public class Cannonball : HandyObject
         transform.position = new Vector3(Statics.DefaultPoolPositionX, Statics.PoolVerticalOffset, 0);
     }
 
-    public void Shoot(Vector3 position, Vector2 force)
+    public void Shoot(Vector3 position, Vector2 velocity)
     {
         transform.position = position;
         _rb.gravityScale = _defaultGravity;
-        _rb.AddForce(force);
+        _rb.velocity = velocity;
     }
     
     /// <summary>
