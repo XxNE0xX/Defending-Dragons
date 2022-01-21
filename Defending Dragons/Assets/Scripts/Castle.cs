@@ -9,6 +9,8 @@ public class Castle : MonoBehaviour
     private int _health;
 
     private bool _gameOverPopup;
+    
+    public int Health => _health;
 
     private void Awake()
     {

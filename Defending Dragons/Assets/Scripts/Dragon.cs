@@ -16,6 +16,10 @@ public class Dragon : MonoBehaviour
     
     [SerializeField] private GameObject blowText;
     [SerializeField] private GameObject eatText;
+    [SerializeField] private GameObject strengthText;
+
+    private string _blow = "Blow?";
+    private string _hungry = "I am hungry!";
 
     public EnemyColor Color
     {
@@ -34,11 +38,21 @@ public class Dragon : MonoBehaviour
                 EnemyColor.Black => Statics.Black,
                 _ => Statics.DefaultColor
             };
+            blowText.GetComponent<TextMeshPro>().color = Statics.GetColorFromEnemyColor(_color);
+            strengthText.GetComponent<TextMeshPro>().color = Statics.GetColorFromEnemyColor(_color);
         }
     }
 
     private void Update()
     {
+        InputManager();
+    }
+
+    private void InputManager()
+    {
+        // Only read the inputs if the game is not paused
+        if (Statics.IsGamePaused) return;
+        
         if (Input.GetButtonDown("Fire2") && _nearFood)
         {
             Feed();
@@ -55,15 +69,17 @@ public class Dragon : MonoBehaviour
         // Despawn the food when it's eaten
         _closeFood.Despawn();
         _strength++;
+        strengthText.GetComponent<TextMeshPro>().SetText(_strength.ToString());
     }
 
     private void Blow()
     {
         if (_strength > 0)
         {
-            _closeCannonball.Power = _strength;
+            _closeCannonball.Power += _strength;
             _closeCannonball.EnemyColor = DetermineNewColor(_closeCannonball.EnemyColor);
             _strength = 0;
+            strengthText.GetComponent<TextMeshPro>().SetText(_strength.ToString());
         }
         else
         {
@@ -119,7 +135,14 @@ public class Dragon : MonoBehaviour
         {
             _nearCannonball = true;
             blowText.SetActive(true);
-            blowText.GetComponent<TextMeshPro>().color = Statics.GetColorFromEnemyColor(_color);
+            if (_strength > 0)
+            {
+                blowText.GetComponent<TextMeshPro>().SetText(_blow);
+            }
+            else
+            {
+                blowText.GetComponent<TextMeshPro>().SetText(_hungry);
+            }
             _closeCannonball = other.gameObject.GetComponent<Cannonball>();
         }
         if (other.gameObject.CompareTag("Food"))

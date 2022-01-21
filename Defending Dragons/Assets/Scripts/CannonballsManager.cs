@@ -37,6 +37,14 @@ public class CannonballsManager : MonoBehaviour
 
     private void Update()
     {
+        InputManager();
+    }
+
+    private void InputManager()
+    {
+        // Only read inputs if the game is running
+        if (Statics.IsGamePaused) return;
+        
         if (Input.GetButtonDown("Fire3") && !_cannonballTooClose)
         {
             SpawnACannonball(EnemyColor.Default, transform.position);

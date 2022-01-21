@@ -57,10 +57,6 @@ public class Cannonball : HandyObject
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-    }
-
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.CompareTag("Ground")) // Upon hitting the ground start the explosion sequence
         {
@@ -85,7 +81,7 @@ public class Cannonball : HandyObject
         Vector3 explosionCenterPosition = _groundTiles.CellToWorld(explosionTilePos);
         // Debug.Log("tile pos: " + explosionCenterPosition);
         explosionCenterPosition = new Vector3(explosionCenterPosition.x + Statics.GROUND_TILES_SIZE / 2, 0, 0);
-        _enemiesManager.ExplosionOnPosition(explosionCenterPosition, 
+        _enemiesManager.ExplosionOnPosition(Power, explosionCenterPosition, 
             Statics.GROUND_TILES_SIZE / 2 + Statics.THRESHOLD_MARGIN_FOR_EXPLOSION, _enemyColor);
     }
 

@@ -48,10 +48,14 @@ public class EnemyMotionManager : MonoBehaviour
 
     private void Update()
     {
-        // If the object is moving, the position updates respectively
-        if (_moving)
+        // Only move if the game is not paused
+        if (!Statics.IsGamePaused)
         {
-            transform.position += Vector3.right * (_localSpeed * Time.deltaTime);
+            // If the object is moving, the position updates respectively
+            if (_moving)
+            {
+                transform.position += Vector3.right * (_localSpeed * Time.deltaTime);
+            }
         }
     }
     

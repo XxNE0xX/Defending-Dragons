@@ -48,6 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        InputManager();
+    }
+
+    private void InputManager()
+    {
+        // Check the inputs only if the game is not paused
+        if (Statics.IsGamePaused) return;
+        
         _horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed * _speedModifier;
         _verticalMove = Input.GetAxisRaw("Ascend") * moveSpeed * Convert.ToInt32(_onLadder);
 
@@ -97,14 +105,15 @@ public class PlayerMovement : MonoBehaviour
         {
             _jump = true;
         }
-        
+
         // Checking for sprinting
         if (Input.GetButtonDown("Sprint"))
         {
             _speedModifier = sprintValueMultiplier;
         }
         // Stop sprinting
-        else if (Input.GetButtonUp("Sprint")){
+        else if (Input.GetButtonUp("Sprint"))
+        {
             _speedModifier = 1f;
         }
     }

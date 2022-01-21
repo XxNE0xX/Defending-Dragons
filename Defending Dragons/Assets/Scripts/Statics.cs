@@ -60,4 +60,6 @@ public class Statics
         };
         return color;
     }
+    
+    public static bool IsGamePaused = false;
 }

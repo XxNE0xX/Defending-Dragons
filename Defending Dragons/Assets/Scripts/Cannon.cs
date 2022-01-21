@@ -107,7 +107,6 @@ public class Cannon : MonoBehaviour
         // Hiding the path
         else
         {
-            Debug.Log(_cannonPathDrawer.gameObject);
             _cannonPathDrawer.gameObject.SetActive(false);
             target.GetComponent<SpriteRenderer>().enabled = false;
         }

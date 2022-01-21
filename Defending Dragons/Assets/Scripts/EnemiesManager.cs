@@ -34,8 +34,9 @@ public class EnemiesManager : MonoBehaviour
     /// </summary>
     /// <param name="enemyColor"> The type of the enemy.</param>
     /// <param name="enemyMoveDirection"> The direction of the enemy movement.</param>
+    /// <param name="enemySize"> The enemy size.</param>
     /// <returns> The enemy object that has been setup and is ready.</returns>
-    public Enemy SpawnAnEnemy(EnemyColor enemyColor, EnemyMoveDirection enemyMoveDirection)
+    public Enemy SpawnAnEnemy(EnemyColor enemyColor, EnemyMoveDirection enemyMoveDirection, int enemySize)
     {
         // Debug.Log("SpawnAFood in EnemiesManager!");
         Enemy chosenEnemy;
@@ -57,9 +58,10 @@ public class EnemiesManager : MonoBehaviour
             _idleEnemies.RemoveAt(_idleEnemies.Count - 1);
         }
         
-        // Setting the enemy type and its direction based on the inputs
+        // Setting the enemy type, its direction, and its size based on the inputs
         chosenEnemy.EnemyColor = enemyColor;
         chosenEnemy.EnemyMoveDirection = enemyMoveDirection;
+        chosenEnemy.EnemySize = enemySize;
         
         // Continue with the local settings that are needed to be set in Enemy object, including starting its movement
         chosenEnemy.Spawn(this);
@@ -106,15 +108,16 @@ public class EnemiesManager : MonoBehaviour
     /// <summary>
     /// The function is supposed to be called by the cannonballs upon hitting the ground.
     /// </summary>
+    /// <param name="power"> The power of cannonball, it can only kill enemies with equal or smaller size.</param>
     /// <param name="position"> The center of the explosion, probably center of a ground tile.</param>
     /// <param name="radius"> The margin that needs to be checked for possible present enemies.</param>
     /// <param name="color"> The color of the cannonball hitting the ground to kill the corresponding enemies.</param>
-    public void ExplosionOnPosition(Vector3 position, float radius, EnemyColor color)
+    public void ExplosionOnPosition(int power, Vector3 position, float radius, EnemyColor color)
     {
         List<Enemy> possibleKilledEnemies = FindEnemiesByPosition(position, radius);
         foreach (Enemy possibleKilledEnemy in possibleKilledEnemies)
         {
-            if (color == possibleKilledEnemy.EnemyColor)    // Enemy is killed
+            if (color == possibleKilledEnemy.EnemyColor && power >= possibleKilledEnemy.EnemySize)    // Enemy is killed
             {
                 DespawnAnEnemy(possibleKilledEnemy);
             }

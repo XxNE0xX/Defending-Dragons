@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Enemy : MonoBehaviour
 {
 
     private SpriteRenderer _spriteRenderer;
+    private int _enemySize;
     private EnemyColor _enemyColor;
     private EnemyMoveDirection _enemyMoveDirection;
     private EnemyStatus _status;
@@ -23,6 +25,22 @@ public class Enemy : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _motionManager = GetComponent<EnemyMotionManager>();
         _enemyDetectionManager = GetComponent<EnemyDetectionManager>();
+    }
+
+    public int EnemySize
+    {
+        get => _enemySize;
+        set
+        {
+            _enemySize = value;
+            Sprite[] charactersAtlas = Resources.LoadAll<Sprite>("Sprites/Characters");
+            _spriteRenderer.sprite = _enemySize switch
+            {
+                1 => charactersAtlas.Single(s => s.name == "Enemy"),
+                2 => charactersAtlas.Single(s => s.name == "Enemy_Large"),
+                _ => charactersAtlas.Single(s => s.name == "Enemy")
+            };
+        }
     }
 
     /// <summary>
@@ -144,10 +162,12 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void Attack()
     {
-
+        // Only attack if the game is running
+        if (Statics.IsGamePaused) return;
+        
         // If the enemy was marching to the right, the damage is supposed to pop up behind his head, therefore true
         bool toLeft = _enemyMoveDirection == EnemyMoveDirection.MarchRight;
-        
+
         int damageAmount = Random.Range(Statics.MinEnemyDamage, Statics.MaxEnemyDamage);
 
         Vector3 damagePopupPosition = transform.position;
