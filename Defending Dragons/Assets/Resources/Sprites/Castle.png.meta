@@ -422,6 +422,9 @@ TextureImporter:
   - first:
       213: 2060112540256327379
     second: TargetBorder
+  - first:
+      213: 3284910344333294980
+    second: UpArrow
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -3462,7 +3465,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3470,6 +3473,27 @@ TextureImporter:
       bones: []
       spriteID: 3d65e4fb07df69c10800000000000000
       internalID: 2060112540256327379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpArrow
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dfdf0dd88569d20800000000000000
+      internalID: 3284910344333294980
       vertices: []
       indices: 
       edges: []
