@@ -21,8 +21,10 @@ public class DragonSpawner : MonoBehaviour
         _maxTFactor = (int)((1 / conveyor.TParamStepsSize) * conveyor.Routes.Length);
     }
     
-    public void SpawnDragons(int amount)
+    public void SpawnDragons(string levelName)
     {
+        TextAsset dragonSpawnFile = Resources.Load<TextAsset>("LevelsData/DSF" + levelName);
+        int amount = int.Parse(dragonSpawnFile.text);
         if (amount > 3 || amount < 1)
         {
             Debug.LogError("Wrong number of dragons passed to the spawner.");

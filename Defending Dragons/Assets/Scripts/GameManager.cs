@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,19 +14,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float dragonSpawnDelay = 0.1f;
     [SerializeField] private Castle castle;
     [SerializeField] private TextMeshProUGUI enemiesCountUIText;
-    [SerializeField] private TextMeshProUGUI castleHealthText;
+    [FormerlySerializedAs("_enemySpawner")] [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private GameObject lostPanel;
+
+    private string _levelName;
+    private int _killedEnemiesCount;
+    private int _totalEnemies;
 
     private void Start()
     {
-        castleHealthText.SetText("x" + castle.Health);
-        StartCoroutine(SpawnTempFunction(1, 0, EnemyColor.Green, EnemyMoveDirection.MarchLeft, 2));
-        StartCoroutine(SpawnTempFunction(4, 0, EnemyColor.Red, EnemyMoveDirection.MarchRight, 2));
+        // The level is set based on the name of the scene
+        _levelName = SceneManager.GetActiveScene().name.Replace("Level", "");
+        enemySpawner.Init(enemiesManager, _levelName);
+        enemySpawner.StartWorking();
         StartCoroutine(SpawnDragons());
     }
 
     private void Update()
     {
-        castleHealthText.SetText("x" + castle.Health);
         InputManager();
     }
 
@@ -32,22 +40,48 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
+            Time.timeScale = Statics.IsGamePaused ? 1 : 0;
             Statics.IsGamePaused = !Statics.IsGamePaused;
         }
     }
 
-
-    IEnumerator SpawnTempFunction(float time, int index, EnemyColor color, EnemyMoveDirection direction, int size)
+    public void SetTotalEnemies(int count)
     {
-        yield return new WaitForSeconds(time);
- 
-        enemiesManager.SpawnAnEnemy(color, direction, size);
+        _totalEnemies = count;
+        UpdateEnemiesCountHUD();
     }
-    
-    IEnumerator SpawnDragons()
+
+    public void EnemyKilled()
+    {
+        _killedEnemiesCount++;
+        UpdateEnemiesCountHUD();
+        if (_killedEnemiesCount == _totalEnemies)
+        {
+            Victory();
+        }
+    }
+
+    private void UpdateEnemiesCountHUD()
+    {
+        enemiesCountUIText.SetText(_killedEnemiesCount + "/" + _totalEnemies);
+    }
+
+    private IEnumerator SpawnDragons()
     {
         yield return new WaitForSeconds(dragonSpawnDelay);
  
-        dragonSpawner.SpawnDragons(3);
+        dragonSpawner.SpawnDragons(_levelName);
+    }
+
+    private void Victory()
+    {
+        Time.timeScale = 0;
+        victoryPanel.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        lostPanel.SetActive(true);
     }
 }

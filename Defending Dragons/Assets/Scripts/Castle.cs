@@ -6,6 +6,8 @@ using UnityEngine;
 public class Castle : MonoBehaviour
 {
     [SerializeField] private int initialHealth = 10000;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private HealthBar healthBar;
     private int _health;
 
     private bool _gameOverPopup;
@@ -15,6 +17,7 @@ public class Castle : MonoBehaviour
     private void Awake()
     {
         _health = initialHealth;
+        healthBar.SetMaxHealth(initialHealth);
     }
 
     private void Update()
@@ -23,6 +26,7 @@ public class Castle : MonoBehaviour
         {
             Debug.Log("Game Over");
             _gameOverPopup = true;
+            gameManager.GameOver();
         }
     }
 
@@ -33,5 +37,6 @@ public class Castle : MonoBehaviour
     public void Damage(int damageAmount)
     {
         _health -= damageAmount;
+        healthBar.SetHealth(_health);
     }
 }

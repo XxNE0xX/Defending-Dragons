@@ -1,0 +1,16 @@
+﻿{
+    "ies": [
+        {
+            "time": 1.0,
+            "color": "Blue",
+            "direction": "MarchLeft",
+            "size": 1
+        },
+        {
+            "time": 2.5,
+            "color": "Blue",
+            "direction": "MarchRight",
+            "size": 1
+        }
+    ]
+}

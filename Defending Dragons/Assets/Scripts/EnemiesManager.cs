@@ -10,6 +10,8 @@ public class EnemiesManager : MonoBehaviour
     [SerializeField] private GameObject enemiesPool;
     [SerializeField] private Castle castle;
 
+    [SerializeField] private GameManager gameManager;
+
     [SerializeField] private float damageIntervals = 1f;
     
     private EnemyGenerator _enemyGenerator;
@@ -120,6 +122,7 @@ public class EnemiesManager : MonoBehaviour
             if (color == possibleKilledEnemy.EnemyColor && power >= possibleKilledEnemy.EnemySize)    // Enemy is killed
             {
                 DespawnAnEnemy(possibleKilledEnemy);
+                gameManager.EnemyKilled();
             }
             else    // Enemy Survives
             {
