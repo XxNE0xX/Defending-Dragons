@@ -20,12 +20,14 @@ public class VictoryMenu : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1;
+        Statics.IsGamePaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void BackToLevelSelection()
     {
         Time.timeScale = 1;
+        Statics.IsGamePaused = false;
         SceneManager.LoadScene("LevelSelection");
     }
 }

@@ -20,12 +20,14 @@ public class LostPanel : MonoBehaviour
     public void ReloadLevel()
     {
         Time.timeScale = 1;
+        Statics.IsGamePaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void BackToLevelSelection()
     {
         Time.timeScale = 1;
+        Statics.IsGamePaused = false;
         SceneManager.LoadScene("LevelSelection");
     }
 }

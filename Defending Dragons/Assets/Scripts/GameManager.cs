@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     [FormerlySerializedAs("_enemySpawner")] [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private GameObject victoryPanel;
     [SerializeField] private GameObject lostPanel;
+    [SerializeField] private GameObject pauseMenu;
+
+    public bool IsVictory { get; private set; }
+
+    public bool IsLost { get; private set; }
 
     private string _levelName;
     private int _killedEnemiesCount;
@@ -29,6 +34,9 @@ public class GameManager : MonoBehaviour
         enemySpawner.Init(enemiesManager, _levelName);
         enemySpawner.StartWorking();
         StartCoroutine(SpawnDragons());
+
+        IsVictory = false;
+        IsLost = false;
     }
 
     private void Update()
@@ -38,10 +46,12 @@ public class GameManager : MonoBehaviour
 
     private void InputManager()
     {
-        if (Input.GetButtonDown("Cancel"))
+        // Only pause the game when it's not already paused, victory condition, or lose condition
+        if (Input.GetButtonDown("Cancel") && !Statics.IsGamePaused && !IsVictory && !IsLost)
         {
-            Time.timeScale = Statics.IsGamePaused ? 1 : 0;
-            Statics.IsGamePaused = !Statics.IsGamePaused;
+            Time.timeScale = 0;
+            Statics.IsGamePaused = true;
+            pauseMenu.SetActive(true);
         }
     }
 
@@ -76,12 +86,25 @@ public class GameManager : MonoBehaviour
     private void Victory()
     {
         Time.timeScale = 0;
+        Statics.IsGamePaused = true;
+        IsVictory = true;
         victoryPanel.SetActive(true);
+
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        // We want to make sure that the maximum allowed level reaches the scene before the final victory scene
+        if (nextSceneIndex > PlayerPrefs.GetInt("currentLevel") && nextSceneIndex < SceneManager.sceneCountInBuildSettings - 1)
+        {
+            PlayerPrefs.SetInt("currentLevel", nextSceneIndex);
+        }
+        // Set completed level to correspond with the currently passed level
+        PlayerPrefs.SetInt("completedLevel", SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GameOver()
     {
         Time.timeScale = 0;
+        Statics.IsGamePaused = true;
+        IsLost = true;
         lostPanel.SetActive(true);
     }
 }

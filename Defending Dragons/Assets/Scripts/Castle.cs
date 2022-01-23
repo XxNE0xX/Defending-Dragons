@@ -14,7 +14,7 @@ public class Castle : MonoBehaviour
     
     public int Health => _health;
 
-    private void Awake()
+    private void Start()
     {
         _health = initialHealth;
         healthBar.SetMaxHealth(initialHealth);

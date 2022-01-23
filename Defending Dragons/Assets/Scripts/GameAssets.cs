@@ -25,6 +25,7 @@ public class GameAssets : MonoBehaviour
     public Food pfFoodTrigger;
     public Dragon pfDragon;
     public Transform pfPathCircle;
+    public GameObject pfLevelButton;
 }
 
 
