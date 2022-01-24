@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject lostPanel;
     [SerializeField] private GameObject pauseMenu;
 
+    public bool IsTutorial { private get; set; }
+    
     public bool IsVictory { get; private set; }
 
     public bool IsLost { get; private set; }
@@ -32,7 +34,11 @@ public class GameManager : MonoBehaviour
         // The level is set based on the name of the scene
         _levelName = SceneManager.GetActiveScene().name.Replace("Level", "");
         enemySpawner.Init(enemiesManager, _levelName);
-        enemySpawner.StartWorking();
+        if (!IsTutorial)
+        {
+            enemySpawner.StartWorking();
+        }
+
         StartCoroutine(SpawnDragons());
 
         IsVictory = false;

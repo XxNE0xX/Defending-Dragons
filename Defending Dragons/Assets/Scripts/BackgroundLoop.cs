@@ -49,7 +49,7 @@ public class BackgroundLoop : MonoBehaviour
 
     private void FixedUpdate()
     {
-        for (int i = 0; i < 2; i++) // Move all the layers to the left based on the given speed
+        for (int i = 1; i >= 0; i--) // Move all the layers to the left based on the given speed, starting from the right one
         {
             Transform layer = backgroundContainer.GetChild(i);
             layer.position += Vector3.left * (Time.deltaTime * movementSpeed);

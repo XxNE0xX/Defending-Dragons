@@ -105,7 +105,7 @@ public class LevelManager : MonoBehaviour
     private void ReadCityNames()
     {
         TextAsset cityNames = Resources.Load<TextAsset>("CityNames");
-        string[] array = Regex.Split(cityNames.text, "\n|\r|\r\n");
+        string[] array = cityNames.text.Split('\n');
         if (array.Length == 1)
         {
             if (array[0] == "")

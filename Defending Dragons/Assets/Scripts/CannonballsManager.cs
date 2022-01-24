@@ -20,6 +20,8 @@ public class CannonballsManager : MonoBehaviour
 
     private List<GameObject> _idleCannonballs;
     private List<Cannonball> _activeCannonballs;
+    
+    private TutorialManager _tutorialManager;
 
     public float CannonballsGravity => cannonballsGravity;
     public float CannonballWidth => cannonballWidth;
@@ -34,6 +36,12 @@ public class CannonballsManager : MonoBehaviour
         _idleCannonballs = new List<GameObject>();
         GeneratePoolObjects(baseCannonballsCountInPool);
         _activeCannonballs = new List<Cannonball>();
+        
+        GameObject TMGO = GameObject.FindWithTag("TutorialManager");
+        if (TMGO != null)
+        {
+            _tutorialManager = TMGO.GetComponent<TutorialManager>();
+        }
     }
 
     private void Update()
@@ -50,6 +58,10 @@ public class CannonballsManager : MonoBehaviour
         {
             SpawnACannonball(EnemyColor.Default, transform.position);
             SFXManager.I.CreateCannonBall();
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.CreatedCannonball = true;
+            }
         }
         else if (Input.GetButtonDown("CreateCannonball") && _cannonballTooClose)
         {

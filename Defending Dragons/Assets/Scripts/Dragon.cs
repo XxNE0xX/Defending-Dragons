@@ -18,6 +18,8 @@ public class Dragon : MonoBehaviour
     [SerializeField] private GameObject eatText;
     [SerializeField] private GameObject strengthText;
 
+    private TutorialManager _tutorialManager;
+    
     private string _blow = "Blow?";
     private string _hungry = "I am hungry!";
 
@@ -43,6 +45,15 @@ public class Dragon : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        GameObject TMGO = GameObject.FindWithTag("TutorialManager");
+        if (TMGO != null)
+        {
+            _tutorialManager = TMGO.GetComponent<TutorialManager>();
+        }
+    }
+
     private void Update()
     {
         InputManager();
@@ -57,12 +68,20 @@ public class Dragon : MonoBehaviour
         {
             Feed();
             SFXManager.I.DragonFeed();
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.FeedDragon = true;
+            }
         }
 
         if (Input.GetButtonDown("DragonBlow") && _nearCannonball)
         {
             Blow();
             SFXManager.I.DragonBreathe();
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.BlowDragon = true;
+            }
         }
     }
 

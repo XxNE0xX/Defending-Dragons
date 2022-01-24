@@ -56,7 +56,7 @@ public class BackgroundLoopMultiple : MonoBehaviour
     {
         for (int i = 0; i < backgroundContainers.Length; i++)
         {
-            for (int j = 0; j < 2; j++) // Move all the layers to the left based on the given speed
+            for (int j = 1; j >= 0; j--) // Move all the layers to the left based on the given speed, starting from the right one
             {
                 Transform layer = backgroundContainers[i].GetChild(j);
                 layer.position += Vector3.left * (Time.deltaTime * movementSpeeds[i]);

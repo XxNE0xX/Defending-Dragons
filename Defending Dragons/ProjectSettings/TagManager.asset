@@ -15,6 +15,7 @@ TagManager:
   - Cannonball
   - FoodSource
   - Lock
+  - TutorialManager
   layers:
   - Default
   - TransparentFX

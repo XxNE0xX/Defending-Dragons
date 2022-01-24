@@ -23,7 +23,10 @@ public abstract class RouteFollow : MonoBehaviour
     private void FixedUpdate()
     {
         GoToTFactor(_tFactor);
+        InputManager();
     }
+
+    protected abstract void InputManager();
 
     public void SetInitialTFactor(int tFactor)
     {

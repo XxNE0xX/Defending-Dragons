@@ -8,6 +8,7 @@ public class SFXManager : MonoBehaviour
 
     private Dictionary<string, AudioClip> soundEffects = new Dictionary<string, AudioClip>();
     private AudioSource _mainAudioSource;
+    private AudioSource _enemiesAudioSource;
     private AudioSource[] _conveyorsAudio;
 
     private static SFXManager _i;
@@ -34,6 +35,10 @@ public class SFXManager : MonoBehaviour
                 cv2.clip = _i.soundEffects["conveyor"];
                 _i._conveyorsAudio = new[] {cv1, cv2};
                 
+                // Adding a separate audioSource for the enemies as well, so the change in volume doesn't affect
+                // other objects
+                _i._enemiesAudioSource = _i.gameObject.AddComponent<AudioSource>();
+
                 // We want to keep this instance available in all the scenes
                 DontDestroyOnLoad(_i);
             }
@@ -171,13 +176,13 @@ public class SFXManager : MonoBehaviour
 
     public void BatteringRam()
     {
-        _mainAudioSource.volume = 0.15f;
-        _mainAudioSource.PlayOneShot(soundEffects["battering_ram"]);
+        _enemiesAudioSource.volume = 0.05f;
+        _enemiesAudioSource.PlayOneShot(soundEffects["battering_ram"]);
     }
 
     public void SwordOnDoor()
     {
-        _mainAudioSource.volume = 0.1f;
-        _mainAudioSource.PlayOneShot(soundEffects["metal_on_wood"]);
+        _enemiesAudioSource.volume = 0.05f;
+        _enemiesAudioSource.PlayOneShot(soundEffects["metal_on_wood"]);
     }
 }

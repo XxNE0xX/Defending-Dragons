@@ -24,7 +24,6 @@ public class Cannon : MonoBehaviour
     private bool _playerNear;
 
     private Vector3 _cannonballSpawnPosition;
-    private float _cannonballFallTime;
     
     public bool Loaded => _loaded;
 
@@ -146,9 +145,7 @@ public class Cannon : MonoBehaviour
     /// <summary>
     /// Calculates the amount of needed force based on the movement equation of the cannonball
     /// </summary>
-    /// <param name="mass"> mass of the cannonball</param>
     /// <param name="gravityScale"> the gravityScale that is being applied to the cannonball</param>
-    /// <param name="spawnPosition"> starting position of the cannonball</param>
     /// <returns></returns>
     private Vector2 VelocityCalculator(float gravityScale)
     {

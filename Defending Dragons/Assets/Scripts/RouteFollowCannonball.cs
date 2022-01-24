@@ -24,10 +24,9 @@ public class RouteFollowCannonball : RouteFollow
         {
             SetInitialTFactor(0);
         }
-        InputManager();
     }
     
-    private void InputManager()
+    protected override void InputManager()
     {
         // Read Inputs only if the game is running
         if (Statics.IsGamePaused) return;

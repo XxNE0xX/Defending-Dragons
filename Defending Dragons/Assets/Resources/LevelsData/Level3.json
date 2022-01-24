@@ -1,0 +1,70 @@
+﻿{
+    "ies": [
+        {
+            "time": 15.0,
+            "color": 1,
+            "direction": "MarchLeft",
+            "size": 1
+        },
+        {
+            "time": 15.5,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        },
+        {
+            "time": 17,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        },
+        {
+            "time": 38,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        },
+        {
+            "time": 39,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        },
+        {
+            "time": 40,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        },
+        {
+            "time": 50,
+            "color": 1,
+            "direction": "MarchLeft",
+            "size": 1
+        },
+        {
+            "time": 52,
+            "color": 1,
+            "direction": "Random",
+            "size": 1
+        },
+        {
+            "time": 65,
+            "color": 1,
+            "direction": "MarchLeft",
+            "size": 1
+        },
+        {
+            "time": 70,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        },
+        {
+            "time": 75,
+            "color": 1,
+            "direction": "MarchRight",
+            "size": 1
+        }
+    ]
+}

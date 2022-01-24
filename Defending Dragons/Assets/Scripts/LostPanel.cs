@@ -17,6 +17,22 @@ public class LostPanel : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(lostMenuFirstButton);
     }
     
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+        {
+            CatchMouseClicks();
+        }
+    }
+    
+    private void CatchMouseClicks()
+    {
+        // Clear the selected object from event system
+        EventSystem.current.SetSelectedGameObject(null);
+        // Set a new selected object
+        EventSystem.current.SetSelectedGameObject(lostMenuFirstButton);
+    }
+    
     public void ReloadLevel()
     {
         Time.timeScale = 1;

@@ -13,6 +13,8 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float gravityOnLadder = 2f;
     [SerializeField] private float itemsAboveHeadOffset = 0.5f;
     
+    private TutorialManager _tutorialManager;
+    
     private Rigidbody2D _rb;
     
     private float _horizontalMove;
@@ -44,6 +46,11 @@ public class PlayerActions : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = defaultGravity;
         _isHandEmpty = true;
+        GameObject TMGO = GameObject.FindWithTag("TutorialManager");
+        if (TMGO != null)
+        {
+            _tutorialManager = TMGO.GetComponent<TutorialManager>();
+        }
     }
 
     private void Update()
@@ -58,6 +65,11 @@ public class PlayerActions : MonoBehaviour
         
         _horizontalMove = Input.GetAxisRaw("P1Horizontal") * moveSpeed * _speedModifier;
         _verticalMove = Input.GetAxisRaw("Ascend") * moveSpeed * Convert.ToInt32(_onLadder);
+
+        if (_tutorialManager != null && !Mathf.Approximately(_verticalMove, 0f))
+        {
+            _tutorialManager.Climbed = true;
+        }
 
         // Picking food, only the player's not already having an item in her hands
         if (Input.GetButtonDown("PickItem") && _nearFood && _isHandEmpty)
@@ -75,6 +87,10 @@ public class PlayerActions : MonoBehaviour
         {
             GrabFood();
             SFXManager.I.FoodBetweenIce();
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.PickedFood = true;
+            }
         }
 
         if (Input.GetButtonDown("PickItem") && _nearCannonball && _isHandEmpty)
@@ -82,6 +98,10 @@ public class PlayerActions : MonoBehaviour
             PickHandyObject(_closeCannonball);
             _closeCannonball.IsPicked = true;
             _closeCannonball.PickedUpByPlayer();
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.CannonballPicked = true;
+            }
         }
         // Loading cannonball to the cannon
         else if (Input.GetButtonDown("DropLoadItem") && _cannonballPicked && _nearCannon && !_closeCannon.Loaded)
@@ -91,6 +111,10 @@ public class PlayerActions : MonoBehaviour
             _objectInHand = null;
             _isHandEmpty = true;
             _cannonballPicked = false;
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.CannonLoaded = true;
+            }
         }
         // Dropping cannonball
         else if (Input.GetButtonDown("DropLoadItem") && _cannonballPicked)
@@ -103,6 +127,10 @@ public class PlayerActions : MonoBehaviour
         else if (Input.GetButtonUp("FireCannon") && _nearCannon) // Player can only shoot the cannon when she is near it
         {
             _closeCannon.Shoot();
+            if (_tutorialManager != null)
+            {
+                _tutorialManager.CannonShot = true;
+            }
         }
 
         // Jump

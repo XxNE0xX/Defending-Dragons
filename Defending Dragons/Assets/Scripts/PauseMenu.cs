@@ -12,16 +12,15 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private GameManager gameManager;
 
-    private bool isOptionsOpened;
+    private bool _isOptionsOpened;
     
     void Start()
     {
+        _isOptionsOpened = false;
         // Clear the selected object from event system
         EventSystem.current.SetSelectedGameObject(null);
         // Set a new selected object
         EventSystem.current.SetSelectedGameObject(pauseMenuFirstButton);
-
-        isOptionsOpened = false;
     }
 
     private void Update()
@@ -32,15 +31,27 @@ public class PauseMenu : MonoBehaviour
     private void InputManager()
     {
         // Getting the cancel button twice, closes the menu
-        if (Input.GetButtonDown("Cancel") && !isOptionsOpened)
+        if (Input.GetButtonDown("Cancel") && !_isOptionsOpened)
         {
             ResumeGame();
         }
         // Getting the cancel button when the options are opened, closes it
-        else if (Input.GetButtonDown("Cancel") && isOptionsOpened)
+        else if (Input.GetButtonDown("Cancel") && _isOptionsOpened)
         {
             CloseOptions();
         }
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+        {
+            CatchMouseClicks();
+        }
+    }
+    
+    private void CatchMouseClicks()
+    {
+        // Clear the selected object from event system
+        EventSystem.current.SetSelectedGameObject(null);
+        // Set a new selected object
+        EventSystem.current.SetSelectedGameObject(_isOptionsOpened ? optionsFirstButton : pauseMenuFirstButton);
     }
 
     public void ResumeGame()
@@ -68,12 +79,11 @@ public class PauseMenu : MonoBehaviour
         mainPauseMenu.SetActive(false);
         optionsMenu.SetActive(true);
         
+        _isOptionsOpened = true;
         // Clear the selected object from event system
         EventSystem.current.SetSelectedGameObject(null);
         // Set a new selected object
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
-
-        isOptionsOpened = true;
     }
     
     public void CloseOptions()
@@ -81,11 +91,10 @@ public class PauseMenu : MonoBehaviour
         mainPauseMenu.SetActive(true);
         optionsMenu.SetActive(false);
         
+        _isOptionsOpened = false;
         // Clear the selected object from event system
         EventSystem.current.SetSelectedGameObject(null);
         // Set a new selected object
         EventSystem.current.SetSelectedGameObject(optionsClosedButton);
-
-        isOptionsOpened = false;
     }
 }

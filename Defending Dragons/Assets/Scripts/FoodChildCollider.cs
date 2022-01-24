@@ -23,6 +23,15 @@ public class FoodChildCollider : ChildCollider
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Default"))
         {
+            GameObject TMGO = GameObject.FindWithTag("TutorialManager");
+            if (TMGO != null)
+            {
+                TutorialManager tutorialManager = GameObject.FindWithTag("TutorialManager").GetComponent<TutorialManager>();
+                if (tutorialManager != null)
+                {
+                    tutorialManager.DroppedFood = true;
+                }
+            }
             SFXManager.I.MeatFall();
         }
     }
