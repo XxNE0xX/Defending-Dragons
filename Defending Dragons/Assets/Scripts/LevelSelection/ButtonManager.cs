@@ -26,5 +26,6 @@ public class ButtonManager : MonoBehaviour
     private void GoToLevel()
     {
         SceneManager.LoadScene(_scenesBeforeMainLevels + _level - 1);
+        SFXManager.I.PlayEntrance();
     }
 }

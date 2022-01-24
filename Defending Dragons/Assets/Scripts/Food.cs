@@ -37,4 +37,6 @@ public class Food : HandyObject
         _rb.gravityScale = 0f;
         _rb.velocity = Vector3.zero;
     }
+    
+    
 }

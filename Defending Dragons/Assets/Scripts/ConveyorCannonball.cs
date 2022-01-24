@@ -8,6 +8,8 @@ public class ConveyorCannonball : Conveyor
     [SerializeField] private GameObject CWRotationIndicator;
     [SerializeField] private GameObject CCWRotationIndicator;
 
+    private bool _isSoundPlaying = false;
+
     private void Start()
     {
         CWRotationIndicator.SetActive(false);
@@ -27,14 +29,26 @@ public class ConveyorCannonball : Conveyor
         if (Input.GetAxisRaw("ConveyorCannonball") > 0)
         {
             CWRotationIndicator.SetActive(true);
+            if (!_isSoundPlaying)
+            {
+                SFXManager.I.ConveyorMoving(false);
+                _isSoundPlaying = true;
+            }
         } else if (Input.GetAxisRaw("ConveyorCannonball") < 0)
         {
             CCWRotationIndicator.SetActive(true);
+            if (!_isSoundPlaying)
+            {
+                SFXManager.I.ConveyorMoving(false);
+                _isSoundPlaying = true;
+            }
         }
         else
         {
             CWRotationIndicator.SetActive(false);
             CCWRotationIndicator.SetActive(false);
+            SFXManager.I.ConveyorStop(false);
+            _isSoundPlaying = false;
         }
     }
 }

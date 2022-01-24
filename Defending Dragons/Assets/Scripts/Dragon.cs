@@ -53,14 +53,16 @@ public class Dragon : MonoBehaviour
         // Only read the inputs if the game is not paused
         if (Statics.IsGamePaused) return;
         
-        if (Input.GetButtonDown("Fire2") && _nearFood)
+        if (Input.GetButtonDown("DragonFeed") && _nearFood)
         {
             Feed();
+            SFXManager.I.DragonFeed();
         }
 
-        if (Input.GetButtonDown("Fire2") && _nearCannonball)
+        if (Input.GetButtonDown("DragonBlow") && _nearCannonball)
         {
             Blow();
+            SFXManager.I.DragonBreathe();
         }
     }
 

@@ -18,4 +18,12 @@ public class FoodChildCollider : ChildCollider
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Default"))
+        {
+            SFXManager.I.MeatFall();
+        }
+    }
 }

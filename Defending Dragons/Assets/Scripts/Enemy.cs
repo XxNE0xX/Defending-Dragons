@@ -33,12 +33,12 @@ public class Enemy : MonoBehaviour
         set
         {
             _enemySize = value;
-            Sprite[] charactersAtlas = Resources.LoadAll<Sprite>("Sprites/Characters");
+            Sprite[] NPCsAtlas = Resources.LoadAll<Sprite>("Sprites/NPCs");
             _spriteRenderer.sprite = _enemySize switch
             {
-                1 => charactersAtlas.Single(s => s.name == "Enemy"),
-                2 => charactersAtlas.Single(s => s.name == "Enemy_Large"),
-                _ => charactersAtlas.Single(s => s.name == "Enemy")
+                1 => NPCsAtlas.Single(s => s.name == "Enemy_1"),
+                2 => NPCsAtlas.Single(s => s.name == "Enemy_2"),
+                _ => NPCsAtlas.Single(s => s.name == "Enemy_1")
             };
         }
     }
@@ -168,7 +168,22 @@ public class Enemy : MonoBehaviour
         // If the enemy was marching to the right, the damage is supposed to pop up behind his head, therefore true
         bool toLeft = _enemyMoveDirection == EnemyMoveDirection.MarchRight;
 
-        int damageAmount = Random.Range(Statics.MinEnemyDamage, Statics.MaxEnemyDamage);
+        int damageAmount;
+        switch (_enemySize)
+        {
+            case 1:
+                damageAmount = Random.Range(Statics.MinEnemy1Damage, Statics.MaxEnemy1Damage);
+                SFXManager.I.SwordOnDoor();
+                break;
+            case 2:
+                damageAmount = Random.Range(Statics.MinEnemy2Damage, Statics.MaxEnemy2Damage);
+                SFXManager.I.BatteringRam();
+                break;
+            default:
+                damageAmount = Random.Range(Statics.MinEnemy1Damage, Statics.MaxEnemy1Damage);
+                SFXManager.I.SwordOnDoor();
+                break;
+        }
 
         Vector3 damagePopupPosition = transform.position;
 
@@ -182,7 +197,7 @@ public class Enemy : MonoBehaviour
         }
 
         _castle.Damage(damageAmount);
-        DamagePopup.Create(damagePopupPosition, damageAmount, toLeft);
+        DamagePopup.Create(damagePopupPosition, damageAmount, toLeft, _enemySize);
     }
 
 }

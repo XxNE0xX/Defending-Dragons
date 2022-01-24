@@ -59,6 +59,7 @@ public class Cannon : MonoBehaviour
             _currentCannonball = null;
             _loaded = false;
             _reloadTextAnimation.gameObject.SetActive(true);
+            SFXManager.I.ShotCannon();
             readyText.gameObject.SetActive(false);
         }
         else

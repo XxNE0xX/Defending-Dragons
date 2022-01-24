@@ -14,8 +14,10 @@ public class Statics
 
     public static readonly float EnemySpeed = 0.7f;
 
-    public static readonly int MaxEnemyDamage = 125;
-    public static readonly int MinEnemyDamage = 50;
+    public static readonly int MaxEnemy1Damage = 125;
+    public static readonly int MinEnemy1Damage = 50;
+    public static readonly int MaxEnemy2Damage = 180;
+    public static readonly int MinEnemy2Damage = 75;
 
     public static readonly float DisappearTimerMax = 1.0f;
     

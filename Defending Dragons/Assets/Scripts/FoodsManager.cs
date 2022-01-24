@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -12,6 +13,7 @@ public class FoodsManager : MonoBehaviour
     [SerializeField] private bool allowMoreThanOneFood = false;
     [SerializeField] private int baseFoodsCountInPool = 1;
     [SerializeField] private int addMoreFoodsToPoolCount = 4;
+    [SerializeField] private AlertPopup maxFoodAlert;
     
     private FoodGenerator _foodGenerator;
     private List<GameObject> _idleFoods;
@@ -63,6 +65,7 @@ public class FoodsManager : MonoBehaviour
         {
             // We can't generate more food before consuming at least one!
             Debug.Log("Can't get more food before consuming at least one!");
+            maxFoodAlert.gameObject.SetActive(true);
         }
 
         return chosenFood;

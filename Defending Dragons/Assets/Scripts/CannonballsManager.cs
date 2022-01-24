@@ -16,6 +16,7 @@ public class CannonballsManager : MonoBehaviour
     [SerializeField] private float cannonballsGravity = 1.5f; 
     [SerializeField] private float cannonballWidth = 0.3125f;
     [SerializeField] private float cannonballWeight = 0.5f;
+    [SerializeField] private AlertPopup cannonballCloseAlert;
 
     private List<GameObject> _idleCannonballs;
     private List<Cannonball> _activeCannonballs;
@@ -45,13 +46,15 @@ public class CannonballsManager : MonoBehaviour
         // Only read inputs if the game is running
         if (Statics.IsGamePaused) return;
         
-        if (Input.GetButtonDown("Fire3") && !_cannonballTooClose)
+        if (Input.GetButtonDown("CreateCannonball") && !_cannonballTooClose)
         {
             SpawnACannonball(EnemyColor.Default, transform.position);
+            SFXManager.I.CreateCannonBall();
         }
-        else if (Input.GetButtonDown("Fire3") && _cannonballTooClose)
+        else if (Input.GetButtonDown("CreateCannonball") && _cannonballTooClose)
         {
             Debug.Log("Other cannonball is too close! Rotate the platform...");
+            cannonballCloseAlert.gameObject.SetActive(true);
         }
     }
 

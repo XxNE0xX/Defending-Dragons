@@ -8,6 +8,8 @@ public class ConveyorDragon : Conveyor
     [SerializeField] private GameObject CWRotationIndicator;
     [SerializeField] private GameObject CCWRotationIndicator;
 
+    private bool _isSoundPlaying = false;
+
     private void Start()
     {
         CWRotationIndicator.SetActive(false);
@@ -27,14 +29,26 @@ public class ConveyorDragon : Conveyor
         if (Input.GetAxisRaw("ConveyorDragon") > 0)
         {
             CCWRotationIndicator.SetActive(true);
+            if (!_isSoundPlaying)
+            {
+                SFXManager.I.ConveyorMoving(true);
+                _isSoundPlaying = true;
+            }
         } else if (Input.GetAxisRaw("ConveyorDragon") < 0)
         {
             CWRotationIndicator.SetActive(true);
+            if (!_isSoundPlaying)
+            {
+                SFXManager.I.ConveyorMoving(true);
+                _isSoundPlaying = true;
+            }
         }
         else
         {
             CWRotationIndicator.SetActive(false);
             CCWRotationIndicator.SetActive(false);
+            SFXManager.I.ConveyorStop(true);
+            _isSoundPlaying = false;
         }
     }
 }

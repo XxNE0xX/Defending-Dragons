@@ -20,6 +20,8 @@ public class Cannonball : HandyObject
     private SpriteRenderer _spriteRenderer;
     
     private EnemyColor _enemyColor;
+    
+    public bool IsPicked { private get; set; }
 
     /// <summary>
     /// Necessary for finding the tile it has collided with.
@@ -66,6 +68,15 @@ public class Cannonball : HandyObject
         }
         
     }
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if ((other.gameObject.layer == LayerMask.NameToLayer("CastleObstacles") || 
+            other.gameObject.layer == LayerMask.NameToLayer("FoodEntrance")) && !IsPicked)
+        {
+            SFXManager.I.DropCannonball();
+        }
+    }
 
     /// <summary>
     /// Finds the collided tile, and calculates the center of the tile.
@@ -83,6 +94,8 @@ public class Cannonball : HandyObject
         explosionCenterPosition = new Vector3(explosionCenterPosition.x + Statics.GROUND_TILES_SIZE / 2, 0, 0);
         _enemiesManager.ExplosionOnPosition(Power, explosionCenterPosition, 
             Statics.GROUND_TILES_SIZE / 2 + Statics.THRESHOLD_MARGIN_FOR_EXPLOSION, _enemyColor);
+        
+        SFXManager.I.CannonballExplode();
     }
 
     private void OnPlatform()

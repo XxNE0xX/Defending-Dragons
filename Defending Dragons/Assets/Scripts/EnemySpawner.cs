@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
     public class InputEntry
     {
         public float time;
-        public string color;
+        public int color;
         public string direction;
         public int size;
     }
@@ -58,17 +58,17 @@ public class EnemySpawner : MonoBehaviour
         _enemiesList = JsonUtility.FromJson<IEList>(file.text);
     }
 
-    private EnemyColor ParseColor(string color)
+    private EnemyColor ParseColor(int color)
     {
         EnemyColor ret = color switch
         {
-            "Blue" => EnemyColor.Blue,
-            "Red" => EnemyColor.Red,
-            "Yellow" => EnemyColor.Yellow,
-            "Green" => EnemyColor.Green,
-            "Purple" => EnemyColor.Purple,
-            "Orange" => EnemyColor.Orange,
-            "Black" => EnemyColor.Black,
+            1 => EnemyColor.Blue,
+            2 => EnemyColor.Red,
+            3 => EnemyColor.Yellow,
+            4 => EnemyColor.Green,
+            5 => EnemyColor.Purple,
+            6 => EnemyColor.Orange,
+            7 => EnemyColor.Black,
             _ => EnemyColor.Default
         };
         return ret;

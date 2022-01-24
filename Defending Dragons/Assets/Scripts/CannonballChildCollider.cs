@@ -12,7 +12,7 @@ public class CannonballChildCollider : ChildCollider
         {
             if (LayerMask.NameToLayer("CastleObstacles") != i &&
                 LayerMask.NameToLayer("LadderTop") != i &&
-                LayerMask.NameToLayer("Default") != i)  // To prevent falling from top of the underground table
+                LayerMask.NameToLayer("FoodEntrance") != i)  // To prevent falling into the food entrance system
             {
                 Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("CannonballChildCollider"), i);
             }

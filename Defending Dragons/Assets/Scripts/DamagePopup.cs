@@ -22,11 +22,11 @@ public class DamagePopup : MonoBehaviour
     /// <param name="damageAmount"> The damage amount that is going to be shown. </param>
     /// <param name="toLeft"> Determines whether the popup should move towards left or right while fading </param>
     /// <returns></returns>
-    public static DamagePopup Create(Vector3 position, int damageAmount, bool toLeft)
+    public static DamagePopup Create(Vector3 position, int damageAmount, bool toLeft, int enemySize)
     {
         DamagePopup pfDamagePopup = GameAssets.I.pfDamagePopup;
         DamagePopup dmgPopup = Instantiate(pfDamagePopup, position, Quaternion.identity);
-        dmgPopup.Setup(damageAmount, toLeft);
+        dmgPopup.Setup(damageAmount, toLeft, enemySize);
 
         return dmgPopup;
     }
@@ -41,11 +41,11 @@ public class DamagePopup : MonoBehaviour
     /// </summary>
     /// <param name="damageAmount"> The text </param>
     /// <param name="toLeft"> Determines whether the popup should move towards left or right while fading</param>
-    private void Setup(int damageAmount, bool toLeft)
+    private void Setup(int damageAmount, bool toLeft, int enemySize)
     {
         _textMesh.SetText(damageAmount.ToString());
         // The color is determined based on the damage value
-        _textMesh.color = CalculateColorBasedOnDamage(damageAmount);
+        _textMesh.color = CalculateColorBasedOnDamage(damageAmount, enemySize);
         _textColor = _textMesh.color;
         _disappearTimer = Statics.DisappearTimerMax;
 
@@ -105,12 +105,24 @@ public class DamagePopup : MonoBehaviour
         }
     }
 
-    private Color32 CalculateColorBasedOnDamage(int damageAmount)
+    private Color32 CalculateColorBasedOnDamage(int damageAmount, int enemySize)
     {
         int greenColorRange = Statics.MaxDamagePopupGreen - Statics.MinDamagePopupGreen;
-        int dmgRange = Statics.MaxEnemyDamage - Statics.MinEnemyDamage;
+        int minDmg = enemySize switch
+        {
+            1 => Statics.MinEnemy1Damage,
+            2 => Statics.MinEnemy2Damage,
+            _ => Statics.MinEnemy1Damage
+        };
+        int maxDmg = enemySize switch
+        {
+            1 => Statics.MaxEnemy1Damage,
+            2 => Statics.MaxEnemy2Damage,
+            _ => Statics.MaxEnemy1Damage
+        };
+        int dmgRange = maxDmg - minDmg;
         int g = Statics.MaxDamagePopupGreen - 
-                (greenColorRange * (damageAmount - Statics.MinEnemyDamage) / dmgRange);
+                (greenColorRange * (damageAmount - minDmg) / dmgRange);
         
         // We want the color to be a shade of yellow-orange
         return new Color32(255, (byte)g, 0, 255);

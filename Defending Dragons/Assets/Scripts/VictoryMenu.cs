@@ -22,6 +22,7 @@ public class VictoryMenu : MonoBehaviour
         Time.timeScale = 1;
         Statics.IsGamePaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SFXManager.I.PlayEntrance();
     }
 
     public void BackToLevelSelection()
