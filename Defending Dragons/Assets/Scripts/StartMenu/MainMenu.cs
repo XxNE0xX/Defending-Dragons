@@ -8,7 +8,8 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     
-    [SerializeField] private GameObject mainMenuFirstButton, optionsFirstButton, optionsClosedButton;
+    [SerializeField] private GameObject mainMenuFirstButton, optionsFirstButton, optionsClosedButton, aboutFirstButton, aboutClosedButton;
+    [SerializeField] private GameObject optionsMenu, mainMenu, aboutPanel;
 
     private bool _isOptionsOpened;
     
@@ -24,9 +25,19 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+        InputManager();
+    }
+    
+    private void InputManager()
+    {
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
             CatchMouseClicks();
+        }
+
+        if (Input.GetButtonDown("Back") && _isOptionsOpened)
+        {
+            CloseOptions();
         }
     }
     
@@ -50,6 +61,9 @@ public class MainMenu : MonoBehaviour
 
     public void OpenOptions()
     {
+        optionsMenu.SetActive(true);
+        mainMenu.SetActive(false);
+
         _isOptionsOpened = true;
         // Clear the selected object from event system
         EventSystem.current.SetSelectedGameObject(null);
@@ -59,10 +73,37 @@ public class MainMenu : MonoBehaviour
     
     public void CloseOptions()
     {
+        mainMenu.SetActive(true);
+        optionsMenu.SetActive(false);
+        
         _isOptionsOpened = false;
         // Clear the selected object from event system
         EventSystem.current.SetSelectedGameObject(null);
         // Set a new selected object
         EventSystem.current.SetSelectedGameObject(optionsClosedButton);
+    }
+    
+    public void OpenAbout()
+    {
+        aboutPanel.SetActive(true);
+        mainMenu.SetActive(false);
+
+        _isOptionsOpened = true;
+        // Clear the selected object from event system
+        EventSystem.current.SetSelectedGameObject(null);
+        // Set a new selected object
+        EventSystem.current.SetSelectedGameObject(aboutFirstButton);
+    }
+    
+    public void CloseAbout()
+    {
+        mainMenu.SetActive(true);
+        aboutPanel.SetActive(false);
+        
+        _isOptionsOpened = false;
+        // Clear the selected object from event system
+        EventSystem.current.SetSelectedGameObject(null);
+        // Set a new selected object
+        EventSystem.current.SetSelectedGameObject(aboutClosedButton);
     }
 }

@@ -3,61 +3,61 @@
         {
             "time": 3.0,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
             "size": 1
         },
         {
             "time": 4.5,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
             "size": 1
         },
         {
             "time": 15.5,
             "color": 1,
-            "direction": "MarchRight",
+            "direction": "Right",
             "size": 1
         },
         {
             "time": 35.5,
             "color": 1,
-            "direction": "MarchRight",
+            "direction": "Right",
             "size": 1
         },
         {
             "time": 37,
             "color": 1,
-            "direction": "MarchRight",
+            "direction": "Right",
             "size": 1
         },
         {
             "time": 39,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
             "size": 1
         },
         {
             "time": 50,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
             "size": 1
         },
         {
             "time": 51,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
             "size": 1
         },
         {
             "time": 50,
             "color": 1,
-            "direction": "MarchRight",
+            "direction": "Right",
             "size": 1
         },
         {
             "time": 51,
             "color": 1,
-            "direction": "MarchRight",
+            "direction": "Right",
             "size": 1
         }
     ]

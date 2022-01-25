@@ -19,9 +19,19 @@ public class FVMenu : MonoBehaviour
     
     private void Update()
     {
+        InputManager();
+    }
+    
+    private void InputManager()
+    {
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
             CatchMouseClicks();
+        }
+
+        if (Input.GetButtonDown("Back"))
+        {
+            Back();
         }
     }
     

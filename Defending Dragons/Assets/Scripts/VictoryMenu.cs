@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class VictoryMenu : MonoBehaviour
 {
@@ -19,9 +20,19 @@ public class VictoryMenu : MonoBehaviour
     
     private void Update()
     {
+        InputManager();
+    }
+
+    private void InputManager()
+    {
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
             CatchMouseClicks();
+        }
+
+        if (Input.GetButtonDown("Back"))
+        {
+            BackToLevelSelection();
         }
     }
     

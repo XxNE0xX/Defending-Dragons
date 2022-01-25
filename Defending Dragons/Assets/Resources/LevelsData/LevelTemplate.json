@@ -3,7 +3,7 @@
         {
             "time": 1.0,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
             "size": 1
         }
     ]

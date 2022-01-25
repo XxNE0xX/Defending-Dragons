@@ -12,25 +12,77 @@ public class TutorialManager : MonoBehaviour
 
     private int _popUpIndex;
 
-    // private bool _climbed;
-    // private bool _pickedFood;
-    // private bool _droppedFood;
-    // private bool _feedDragon;
-    // private bool _createdCannonball;
-    // private bool _blowDragon;
-    // private bool _cannonballPicked;
-    // private bool _cannonLoaded;
-    // private bool _cannonShot;
+    private bool _climbed;
+    private bool _pickedFood;
+    private bool _droppedFood;
+    private bool _feedDragon;
+    private bool _createdCannonball;
+    private bool _blowDragon;
+    private bool _cannonballPicked;
+    private bool _cannonLoaded;
+    private bool _cannonShot;
     
-    public bool Climbed { private get; set; }
-    public bool PickedFood { private get; set; }
-    public bool DroppedFood { private get; set; }
-    public bool FeedDragon { private get; set; }
-    public bool CreatedCannonball { private get; set; }
-    public bool BlowDragon { private get; set; }
-    public bool CannonballPicked { private get; set; }
-    public bool CannonLoaded { private get; set; }
-    public bool CannonShot { private get; set; }
+    public bool Climbed
+    {
+        set
+        {
+            if (_popUpIndex >= 2)
+            {
+                _climbed = true;
+            }
+        }
+    }
+
+    public bool PickedFood { set
+    {
+        if (_popUpIndex >= 3)
+        {
+            _pickedFood = value;
+        }
+    } }
+    public bool DroppedFood { set
+    {
+        if (_popUpIndex >= 4)
+        {
+            _droppedFood = value;
+        }
+    } }
+    public bool FeedDragon { set
+    {
+        if (_popUpIndex >= 6)
+        {
+            _feedDragon = value;
+        }
+    } }
+    public bool CreatedCannonball { set => _createdCannonball = value; }
+    public bool BlowDragon { set
+    {
+        if (_popUpIndex >= 9)
+        {
+            _blowDragon = value;
+        }
+    } }
+    public bool CannonballPicked { set
+    {
+        if (_popUpIndex >= 10)
+        {
+            _cannonballPicked = value;
+        }
+    } }
+    public bool CannonLoaded { set
+    {
+        if (_popUpIndex >= 11)
+        {
+            _cannonLoaded = value;
+        }
+    } }
+    public bool CannonShot { set
+    {
+        if (_popUpIndex >= 12)
+        {
+            _cannonShot = value;
+        }
+    } }
 
     private void Awake()
     {
@@ -71,7 +123,7 @@ public class TutorialManager : MonoBehaviour
         // Third popup: climbing ladders
         else if (_popUpIndex == 2)
         {
-            if (Climbed)
+            if (_climbed)
             {
                 _popUpIndex++;
             }
@@ -79,7 +131,7 @@ public class TutorialManager : MonoBehaviour
         // Fourth popup: picking up food
         else if (_popUpIndex == 3)
         {
-            if (PickedFood)
+            if (_pickedFood)
             {
                 _popUpIndex++;
             }
@@ -87,7 +139,7 @@ public class TutorialManager : MonoBehaviour
         // Fifth popup: dropping food for the dragon
         else if (_popUpIndex == 4)
         {
-            if (DroppedFood)
+            if (_droppedFood)
             {
                 _popUpIndex++;
             }
@@ -105,7 +157,7 @@ public class TutorialManager : MonoBehaviour
         // Seventh popup: feeding the dragon
         else if (_popUpIndex == 6)
         {
-            if (FeedDragon)
+            if (_feedDragon)
             {
                 _popUpIndex++;
             }
@@ -114,7 +166,7 @@ public class TutorialManager : MonoBehaviour
         // Eighth popup: creating cannonball
         else if (_popUpIndex == 7)
         {
-            if (CreatedCannonball)
+            if (_createdCannonball)
             {
                 _popUpIndex++;
             }
@@ -132,7 +184,7 @@ public class TutorialManager : MonoBehaviour
         // Tenth popup: dragon blowing
         else if (_popUpIndex == 9)
         {
-            if (BlowDragon)
+            if (_blowDragon)
             {
                 _popUpIndex++;
             }
@@ -141,7 +193,7 @@ public class TutorialManager : MonoBehaviour
         // Eleventh popup: picking up cannonball
         else if (_popUpIndex == 10)
         {
-            if (CannonballPicked)
+            if (_cannonballPicked)
             {
                 _popUpIndex++;
             }
@@ -150,7 +202,7 @@ public class TutorialManager : MonoBehaviour
         // Twelfth popup: loading cannon
         else if (_popUpIndex == 11)
         {
-            if (CannonLoaded)
+            if (_cannonLoaded)
             {
                 _popUpIndex++;
             }
@@ -159,7 +211,7 @@ public class TutorialManager : MonoBehaviour
         // Thirteenth popup: shooting cannon
         else if (_popUpIndex == 12)
         {
-            if (CannonShot)
+            if (_cannonShot)
             {
                 _popUpIndex++;
             }

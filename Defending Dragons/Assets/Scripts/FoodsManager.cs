@@ -11,6 +11,7 @@ public class FoodsManager : MonoBehaviour
     [SerializeField] private GameObject foodsPool;
     [SerializeField] private float foodsGravityScale = 0.5f;
     [SerializeField] private bool allowMoreThanOneFood = false;
+    [SerializeField] private int maxAllowedFood = 3;
     [SerializeField] private int baseFoodsCountInPool = 1;
     [SerializeField] private int addMoreFoodsToPoolCount = 4;
     [SerializeField] private AlertPopup maxFoodAlert;
@@ -39,7 +40,7 @@ public class FoodsManager : MonoBehaviour
         
         // Choose an enemy from the idle foods stack
         // if there is at least one idle food, we choose it and continue
-        if (_idleFoods.Count > 0)
+        if (_idleFoods.Count > 0 && _activeFoods.Count < maxAllowedFood)
         {
             chosenFood = _idleFoods[_idleFoods.Count - 1].GetComponent<Food>();
             _idleFoods.RemoveAt(_idleFoods.Count - 1);
@@ -50,7 +51,7 @@ public class FoodsManager : MonoBehaviour
         }
 
         // otherwise, if there is no idle food, we spawn some more to the pool and then choose one
-        else if (allowMoreThanOneFood)
+        else if (allowMoreThanOneFood && _activeFoods.Count < maxAllowedFood)
         {
             _foodGenerator.GenerateObjects(_idleFoods, foodsPool, addMoreFoodsToPoolCount);
             // Debug.Log("Idle enemies count: " + _idleFoods.Count);

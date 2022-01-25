@@ -12,7 +12,7 @@ public class Statics
     public static readonly float EnemySpawnOffset = 0.8f;
     public static readonly float PoolVerticalOffset = 0.35f;
 
-    public static readonly float EnemySpeed = 0.7f;
+    public static readonly float EnemySpeed = 0.5f;
 
     public static readonly int MaxEnemy1Damage = 125;
     public static readonly int MinEnemy1Damage = 50;

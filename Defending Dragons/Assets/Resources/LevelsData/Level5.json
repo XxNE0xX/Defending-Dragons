@@ -1,0 +1,100 @@
+﻿{
+    "ies": [
+        {
+            "time": 15,
+            "color": 2,
+            "direction": "Left",
+            "size": 1
+        },
+        {
+            "time": 16,
+            "color": 2,
+            "direction": "Right",
+            "size": 2
+        },
+        {
+            "time": 17,
+            "color": 1,
+            "direction": "Right",
+            "size": 1
+        },
+        {
+            "time": 38,
+            "color": 1,
+            "direction": "Right",
+            "size": 1
+        },
+        {
+            "time": 40,
+            "color": 1,
+            "direction": "Left",
+            "size": 2
+        },
+        {
+            "time": 42,
+            "color": 1,
+            "direction": "Left",
+            "size": 1
+        },
+        {
+            "time": 44,
+            "color": 2,
+            "direction": "Random",
+            "size": 2
+        },
+        {
+            "time": 55,
+            "color": 1,
+            "direction": "Right",
+            "size": 1
+        },
+        {
+            "time": 57,
+            "color": 1,
+            "direction": "Right",
+            "size": 1
+        },
+        {
+            "time": 60,
+            "color": 1,
+            "direction": "Left",
+            "size": 2
+        },
+        {
+            "time": 62,
+            "color": 1,
+            "direction": "Left",
+            "size": 1
+        },
+        {
+            "time": 70,
+            "color": 2,
+            "direction": "Left",
+            "size": 1
+        },
+        {
+            "time": 72,
+            "color": 1,
+            "direction": "Right",
+            "size": 1
+        },
+        {
+            "time": 85,
+            "color": 1,
+            "direction": "Random",
+            "size": 2
+        },
+        {
+            "time": 87,
+            "color": 2,
+            "direction": "Right",
+            "size": 1
+        },
+        {
+            "time": 90,
+            "color": 1,
+            "direction": "Left",
+            "size": 1
+        }
+    ]
+}

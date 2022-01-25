@@ -78,8 +78,8 @@ public class EnemySpawner : MonoBehaviour
     {
         EnemyMoveDirection ret = direction switch
         {
-            "MarchLeft" => EnemyMoveDirection.MarchLeft,
-            "MarchRight" => EnemyMoveDirection.MarchRight,
+            "Left" => EnemyMoveDirection.MarchLeft,
+            "Right" => EnemyMoveDirection.MarchRight,
             "Random" => (EnemyMoveDirection)Random.Range(1, 3),
             _ => (EnemyMoveDirection)Random.Range(1, 3)
         };

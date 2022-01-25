@@ -173,7 +173,31 @@ public class Dragon : MonoBehaviour
             _closeFood = other.gameObject.GetComponent<Food>();
         }
     }
-    
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Cannonball"))
+        {
+            _nearCannonball = true;
+            blowText.SetActive(true);
+            if (_strength > 0)
+            {
+                blowText.GetComponent<TextMeshPro>().SetText(_blow);
+            }
+            else
+            {
+                blowText.GetComponent<TextMeshPro>().SetText(_hungry);
+            }
+            _closeCannonball = other.gameObject.GetComponent<Cannonball>();
+        }
+        if (other.gameObject.CompareTag("Food"))
+        {
+            _nearFood = true;
+            eatText.SetActive(true);
+            _closeFood = other.gameObject.GetComponent<Food>();
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Cannonball"))

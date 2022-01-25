@@ -3,7 +3,19 @@
         {
             "time": 1.0,
             "color": 1,
-            "direction": "MarchLeft",
+            "direction": "Left",
+            "size": 1
+        },
+        {
+            "time": 5.0,
+            "color": 1,
+            "direction": "Left",
+            "size": 1
+        },
+        {
+            "time": 15.0,
+            "color": 1,
+            "direction": "Left",
             "size": 1
         }
     ]

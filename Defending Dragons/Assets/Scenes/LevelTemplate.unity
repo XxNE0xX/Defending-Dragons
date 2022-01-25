@@ -15555,7 +15555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodsPool: {fileID: 2042276701}
   foodsGravityScale: 0.5
-  allowMoreThanOneFood: 0
+  allowMoreThanOneFood: 1
+  maxAllowedFood: 3
   baseFoodsCountInPool: 1
   addMoreFoodsToPoolCount: 4
   maxFoodAlert: {fileID: 259438574}
