@@ -3944,7 +3944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'P1: Pick the cannonball when it''s near using lefft alt/button X'
+  m_text: 'P1: Pick the cannonball when it''s near using left alt/button X'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4df60c2011ad1bd4385b2114a5e9efdc, type: 2}
   m_sharedMaterial: {fileID: 8639106989734339575, guid: 4df60c2011ad1bd4385b2114a5e9efdc, type: 2}
@@ -5991,6 +5991,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312859800}
     m_Modifications:
+    - target: {fileID: 1964931257462623748, guid: 9c3442d3adb50ef47a93e20a54f7a854, type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964931257462623748, guid: 9c3442d3adb50ef47a93e20a54f7a854, type: 3}
+      propertyPath: m_MinValue
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 5231658969724104096, guid: 9c3442d3adb50ef47a93e20a54f7a854, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

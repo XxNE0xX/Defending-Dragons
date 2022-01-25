@@ -45,6 +45,8 @@ public class FVMenu : MonoBehaviour
     
     public void Back()
     {
+        Time.timeScale = 1;
+        Statics.IsGamePaused = false;
         SceneManager.LoadScene("LevelSelection");
     }
 }

@@ -16,6 +16,7 @@ TagManager:
   - FoodSource
   - Lock
   - TutorialManager
+  - BGMusic
   layers:
   - Default
   - TransparentFX
